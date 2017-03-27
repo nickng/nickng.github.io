@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicholas Ng - Go concurrency verification</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+<link href='/css/style.min.css' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
+
+<meta name="generator" content="Hugo 0.20-DEV" />
+</head>
+<body>
+<header>
+<div class='container'><h1>Nicholas Ng</h1></div>
+<nav id='main-nav'>
+  <ul class='container'>
+    
+    
+    
+    
+    
+    <li>
+    
+      <a href='/'>Home </a>
+    </li>
+    
+    
+    
+    
+    <li class='active'>
+    
+      <a href='/projects/'>Projects </a>
+    </li>
+    
+    
+    
+    
+    <li>
+    
+      <a href='/publications/'>Publications </a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+<div class='container'>
+
+<h1>Go concurrency verification</h1>
+<div class='tags'>
+<span class='tag'>Golang</span>
+<span class='tag'>static analysis</span>
+<span class='tag'>process calculi</span>
+<span class='tag'>behavioural types</span>
+</div>
+
+
+<p>The aim of this line of work is to verify channel-based concurrency interaction
+in <a href="http://golang.org">Go</a> using techniques from the research area of
+<a href="https://en.wikipedia.org/wiki/Process_calculus">process calculi</a> and
+<a href="https://en.wikipedia.org/wiki/Type_system">type systems</a>.</p>
+
+<h2 id="tools">Tools</h2>
+
+<p><a href="https://github.com/nickng/dingo-hunter">nickng/dingo-hunter</a> is a static
+analyser for Go based on the <a href="http://golang.org/x/tools/go/ssa">go/ssa</a> package
+from the Go project. The tool itself is designed to be an interface to Go
+programs, performing type inference/model extraction from Go code. Current
+analysis frontends include:</p>
+
+<ul>
+<li>Communicating Finite State Machines (<a href="https://github.com/nickng/cfsm">CFSMs</a>)
+modelling goroutines.</li>
+<li>A <strong>mi</strong>ni <strong>Go</strong> process calculi/type system
+(<a href="https://github.com/nickng/migo">MiGo</a>) as a high level, communication-only
+abstraction.</li>
+</ul>
+
+<h2 id="publications">Publications</h2>
+
+<ul>
+<li><a href="http://mrg.doc.ic.ac.uk/publications/static-deadlock-detection-for-concurrent-go-by-global-session-graph-synthesis/">Static Deadlock Detection for Concurrent Go by Global Session Graph
+Synthesis</a> uses the CFSMs synthesis approach.</li>
+<li><a href="http://mrg.doc.ic.ac.uk/publications/fencing-off-go-liveness-and-safety-for-channel-based-programming/">Fencing off Go: Liveness and Safety for Channel-based Programming</a>
+uses the MiGo approach.</li>
+</ul>
+
+</div>
+<footer>
+  <ul class='container'>
+    <li>Contact</li>
+    <li><a href='mailto:nickng@imperial.ac.uk'>nickng@imperial.ac.uk</a></li>
+    <li><a href='https://twitter.com/nicholascwng'>@nicholascwng</a></li>
+    <li><a href='https://linkedin.com/in/nicholascwng'>nicholascwng</a></li>
+    <li><a href='https://github.com/nickng'>nickng</a></li>
+    <li><a href='https://bitbucket.org/nickng'>nickng</a></li>
+  </ul>
+</footer>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1241840-8', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+

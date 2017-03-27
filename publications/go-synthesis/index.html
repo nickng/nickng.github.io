@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicholas Ng - Static Deadlock Detection for Concurrent Go by Global Session Graph Synthesis</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+<link href='/css/style.min.css' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
+
+<meta name="generator" content="Hugo 0.20-DEV" />
+</head>
+<body>
+<header>
+<div class='container'><h1>Nicholas Ng</h1></div>
+<nav id='main-nav'>
+  <ul class='container'>
+    
+    
+    
+    
+    
+    <li>
+    
+      <a href='/'>Home </a>
+    </li>
+    
+    
+    
+    
+    <li>
+    
+      <a href='/projects/'>Projects </a>
+    </li>
+    
+    
+    
+    
+    <li class='active'>
+    
+      <a href='/publications/'>Publications </a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+<div class='container'>
+
+
+<h1>Static Deadlock Detection for Concurrent Go by Global Session Graph Synthesis</h1>
+<h3>25th International Conference on Compiler Construction (CC 2016)</h3>
+<ul><li>Nicholas Ng</li>
+<li>Nobuko Yoshida</li>
+</ul>
+
+
+<h3 id="abstract">Abstract</h3>
+
+<p>Go is a programming language developed at
+Google, with channel-based concurrent features based on CSP.  Go can
+detect global communication deadlocks at runtime when all threads of
+execution are blocked, but deadlocks in other paths of execution could
+be undetected.  We present a new static analyser for concurrent Go code
+to find potential communication errors such as communication mismatch
+and deadlocks at compile time. Our tool extracts the communication
+operations as session types, which are then converted into Communicating
+Finite State Machines (CFSMs).  Finally, we apply a recent theoretical
+result on choreography synthesis to generate a global graph representing
+the overall communication pattern of a concurrent program. If the
+synthesis is successful, then the program is free from communication
+errors.</p>
+
+<p>We have implemented the technique in a tool, and applied it to analyse
+common Go concurrency patterns and an open source application with over
+700 lines of code.</p>
+
+<p><a href="http://dx.doi.org/10.1145/2892208.2892232">Published version via DOI</a> |
+<a href="main.pdf">Paper</a> | <a href="http://dingo-hunter.appspot.com/conf-cc-2016.slide">Executable slides</a> | <a href="http://mrg.doc.ic.ac.uk/publications/static-deadlock-detection-for-concurrent-go-by-global-session-graph-synthesis/">www</a></p>
+
+<h3 id="dingo-hunter">dingo-hunter</h3>
+
+<p>Our extraction tool dingo-hunter is available at <a href="https://github.com/nickng/dingo-hunter">GitHub</a>, and require go version <code>go1.5</code>.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZVxYNeQLWDQ" frameborder="0" allowfullscreen></iframe>
+
+</div>
+<footer>
+  <ul class='container'>
+    <li>Contact</li>
+    <li><a href='mailto:nickng@imperial.ac.uk'>nickng@imperial.ac.uk</a></li>
+    <li><a href='https://twitter.com/nicholascwng'>@nicholascwng</a></li>
+    <li><a href='https://linkedin.com/in/nicholascwng'>nicholascwng</a></li>
+    <li><a href='https://github.com/nickng'>nickng</a></li>
+    <li><a href='https://bitbucket.org/nickng'>nickng</a></li>
+  </ul>
+</footer>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1241840-8', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+

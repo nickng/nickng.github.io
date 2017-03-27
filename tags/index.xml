@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Nicholas Ng</title>
+    <link>http://www.nickng.io/tags/index.xml</link>
+    <description>Recent content in Tags on Nicholas Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <atom:link href="http://www.nickng.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Behavioural Types</title>
+      <link>http://www.nickng.io/tags/behavioural-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/behavioural-types/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>http://www.nickng.io/tags/c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://www.nickng.io/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://www.nickng.io/tags/golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parallel Programming</title>
+      <link>http://www.nickng.io/tags/parallel-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/parallel-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parameterised Session Types</title>
+      <link>http://www.nickng.io/tags/parameterised-session-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/parameterised-session-types/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Parser</title>
+      <link>http://www.nickng.io/tags/parser/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/parser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Process Calculi</title>
+      <link>http://www.nickng.io/tags/process-calculi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/process-calculi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scribble</title>
+      <link>http://www.nickng.io/tags/scribble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/scribble/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static Analysis</title>
+      <link>http://www.nickng.io/tags/static-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/tags/static-analysis/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

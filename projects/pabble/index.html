@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicholas Ng - Pabble protocol description language</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+<link href='/css/style.min.css' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
+
+<meta name="generator" content="Hugo 0.20-DEV" />
+</head>
+<body>
+<header>
+<div class='container'><h1>Nicholas Ng</h1></div>
+<nav id='main-nav'>
+  <ul class='container'>
+    
+    
+    
+    
+    
+    <li>
+    
+      <a href='/'>Home </a>
+    </li>
+    
+    
+    
+    
+    <li class='active'>
+    
+      <a href='/projects/'>Projects </a>
+    </li>
+    
+    
+    
+    
+    <li>
+    
+      <a href='/publications/'>Publications </a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+<div class='container'>
+
+<h1>Pabble protocol description language</h1>
+<div class='tags'>
+<span class='tag'>Scribble</span>
+<span class='tag'>Parameterised Session Types</span>
+<span class='tag'>C&#43;&#43;</span>
+</div>
+
+
+<p>Pabble is a protocol description language, parametric variant of the
+<a href="http://scribble.org">Scribble</a> language, extended for modelling communication
+in parallel applications.</p>
+
+<h2 id="publications">Publications</h2>
+
+<ul>
+<li><a href="http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble-for-parallel-programming/">Pabble: Parameterised Scribble for Parallel Programming</a></li>
+<li><a href="http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble/">Pabble: parameterised Scribble</a></li>
+<li><a href="http://mrg.doc.ic.ac.uk/publications/safe-mpi-code-generation-based-on-session-types/">Protocols by Default: Safe MPI Code Generation based on Session Types</a></li>
+</ul>
+
+<h2 id="related-resources">Related resources</h2>
+
+<ul>
+<li><a href="http://scribble.org">Scribble project</a></li>
+<li><a href="google-poster.pdf">Poster</a> for code generation work</li>
+</ul>
+
+<hr />
+
+<h2 id="pabble-examples">Pabble examples</h2>
+
+<h3 id="pabble-protocols-dwarfs">Pabble protocols: dwarfs</h3>
+
+<p>The following <a href="http://mrg.doc.ic.ac.uk/tools/pabble/">Pabble</a> protocols are examples chosen
+from am evaluation metic for parallel programming models and architectues called
+<a href="http://view.eecs.berkeley.edu">dwarfs</a> from UC Berkeley, details available from
+their <a href="http://dl.acm.org/citation.cfm?id=1562764.1562783">CACM article</a>.
+The article defines six categories of algorithmic patterns (called dwarfs)
+common in HPC applications: Structured Grid, Dense Matrix, Sparse Matrix,
+Spectral (FFT), Particle methods, and Unstructured Grid. Each of the protocols
+below belong to one of the categories.</p>
+
+<h4 id="n-body-simulation">N-Body simulation</h4>
+
+<pre><code class="language-pabble">global protocol NBody(role W[0..N]) {
+    rec LOOP {
+        (float) from Worker[i:0..N-1] to W[i+1];
+        (float) from Worker[N] to W[0];
+        /* Calculate Velocity */
+        continue LOOP; 
+    }
+    /* Calculate Step */
+}
+</code></pre>
+
+<h4 id="dynamic-load-balancing">Dynamic load balancing</h4>
+
+<pre><code class="language-pabble">global protocol LoadBalancing(role Worker[0..N]) {
+    rec REPEAT {
+        oneof (Worker[i in 1..N]) {
+            request() from Worker[i] to Worker[0];
+            choice at Worker[0] {
+                finish() from Worker[0] to Worker[i];
+                foreach (x:1..N except i) {
+                    request() from Worker[x] to Worker[0];
+                    finish() from Worker[0] to Worker[x]; 
+                }
+            } or {
+                reply() from Worker[0] to Worker[i]; continue REPEAT;
+            }
+        }
+    }
+}
+</code></pre>
+
+<h4 id="dense-matrix-vector-multiplication">Dense matrix-vector multiplication</h4>
+
+<pre><code class="language-pabble">global protocol DenseMatVec(role Worker[0..N]) {
+    // Scatter Matrix A
+    foreach (i:1..N) {
+        LBound(int) from Worker[0] to Worker[i];
+        UBound(int) from Worker[0] to Worker[i];
+        Data(double) from Worker[0] to Worker[i];
+    }
+    // Scatter Vector B
+    (double) from Worker[0] to Worker[1..N];
+    // --- Perform calculation ---
+    // Gather data
+    (double) from Worker[1..N] to Worker[0];
+}
+</code></pre>
+
+<h4 id="sparse-matrix-vector-multiplication">Sparse matrix-vector multiplication</h4>
+
+<pre><code class="language-pabble">global protocol SparseMatVec(role PE[0..N]) {
+    /* Distribute data */
+    (int) from W[0] to W[1..N]; // row_ptr
+    (int) from W[0] to W[1..N]; // col_ind
+    (double) from W[0] to W[1..N]; // vals
+    (double) from W[0] to W[1..N]; // vector
+    /* Output vector */
+    (double) from W[1..N] to W[0];
+}
+</code></pre>
+
+<h4 id="fast-fourier-transformation-fft">Fast-Fourier Transformation (FFT)</h4>
+
+<pre><code class="language-pabble">const N = 3;
+global protocol FFT(role W[0..7]) {
+    foreach (r:0..N-1) {
+        foreach (i:0..2&lt;&lt;N-1) {
+            Label(int) from Worker[i] to Worker[i - (i/1&lt;&lt;r)%2 * 1&lt;&lt;(r+1) + 1&lt;&lt;r];
+        }
+    }
+}
+</code></pre>
+
+<h4 id="linear-equation-solver">Linear Equation Solver</h4>
+
+<pre><code class="language-pabble">global protocol Solver(role W[1..N][1..N], group Col={W[1..N][1]}) {
+    rec CONVERGE {
+        Ring(double) from W[i:1..N][j:1..N-1] to W[i][j+1];
+        Ring(double) from W[i:1..N][N] to W[i][1];
+
+        // Vertical propagation
+        (double) from Col to Col;
+        continue CONVERGE; 
+    }
+}
+</code></pre>
+
+<h4 id="monte-carlo-pi-simulation">Monte-Carlo Pi simulation</h4>
+
+<pre><code class="language-pabble">global protocol MonteCarloPi(role Worker[0..N]) {
+    // Calculation per process
+    Count(int) from Worker[0] to Worker[1..N];
+    Result(double) from Worker[1..N] to Worker[0];
+    // Final result calculated at Worker[0];
+}
+</code></pre>
+
+</div>
+<footer>
+  <ul class='container'>
+    <li>Contact</li>
+    <li><a href='mailto:nickng@imperial.ac.uk'>nickng@imperial.ac.uk</a></li>
+    <li><a href='https://twitter.com/nicholascwng'>@nicholascwng</a></li>
+    <li><a href='https://linkedin.com/in/nicholascwng'>nicholascwng</a></li>
+    <li><a href='https://github.com/nickng'>nickng</a></li>
+    <li><a href='https://bitbucket.org/nickng'>nickng</a></li>
+  </ul>
+</footer>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1241840-8', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+

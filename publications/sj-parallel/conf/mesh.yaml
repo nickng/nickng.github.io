@@ -1,0 +1,115 @@
+---
+master:
+  class: jacobi.mc.Master
+  client:
+    - name: right
+      protocol: p_right
+      service: left@north
+    - name: below
+      protocol: p_below
+      service: above@west
+
+north:
+  class: jacobi.mc.WorkerNorth
+  client:
+    - name: right
+      protocol: p_right
+      service: left@northeast
+    - name: below
+      protocol: p_below
+      service: above@worker
+  server:
+    - name: left
+      protocol: p_left
+      socket: 'tcp://axel08:40001'
+
+northeast:
+  class: jacobi.mc.WorkerNorthEast
+  client:
+    - name: below
+      protocol: p_below
+      service: above@east
+  server:
+    - name: left
+      protocol: p_left
+      socket: 'tcp://axel09:40002'
+
+west:
+  class: jacobi.mc.WorkerWest
+  client:
+    - name: right
+      protocol: p_right
+      service: left@worker
+    - name: below
+      protocol: p_below
+      service: above@southwest
+  server:
+    - name: above
+      protocol: p_above
+      socket: 'tcp://axel10:40003'
+
+worker:
+  class: jacobi.mc.Worker
+  client: 
+    - name: right
+      protocol: p_right
+      service: left@east
+    - name: below
+      protocol: p_below
+      service: above@south
+  server:
+    - name: above
+      protocol: p_above
+      socket: 'tcp://axel11:40004'
+    - name: left
+      protocol: p_left
+      socket: 'tcp://axel11:40005'
+
+east:
+  class: jacobi.mc.WorkerEast
+  client:
+    - name: below
+      protocol: p_below
+      service: above@southeast
+  server:
+    - name: left
+      protocol: p_left
+      socket: 'tcp://axel13:40007'
+    - name: above
+      protocol: p_above
+      socket: 'tcp://axel13:40006'
+
+southwest:
+  class: jacobi.mc.WorkerSouthWest
+  client:
+    - name: right
+      protocol: p_right
+      service: left@south
+  server:
+    - name: above
+      protocol: p_above
+      socket: 'tcp://axel14:40008'
+
+south:
+  class: jacobi.mc.WorkerSouth
+  client:
+    - name: right
+      protocol: p_right
+      service: left@southeast
+  server:
+    - name: left
+      protocol: p_left
+      socket: 'tcp://axel15:40009'
+    - name: above
+      protocol: p_above
+      socket: 'tcp://axel15:40010'
+
+southeast:
+  class: jacobi.mc.WorkerSouthEast
+  server:
+    - name: left
+      protocol: p_left
+      socket: 'tcp://axel16:40011'
+    - name: above
+      protocol: p_above
+      socket: 'tcp://axel16:40012'

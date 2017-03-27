@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Nicholas Ng</title>
+    <link>http://www.nickng.io/index.xml</link>
+    <description>Recent content in About on Nicholas Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <atom:link href="http://www.nickng.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>http://www.nickng.io/publications/sj-parallel/benchmarks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/sj-parallel/benchmarks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.nickng.io/publications/sj-parallel/src/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/sj-parallel/src/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>BibTeX parser and pretty printer in Go</title>
+      <link>http://www.nickng.io/projects/bibtex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/projects/bibtex/</guid>
+      <description>nickng/bibtex is a BibTeX parser and pretty printer for Go. The main aim is the recreate a bibtex tool for the undocumented BibTeX format in a modern language that can be backwards compatible with the existing bibtex tool in the TeXLive latex distribution.
+See prettybib.nickng.io for a web-based interface.</description>
+    </item>
+    
+    <item>
+      <title>Go concurrency verification</title>
+      <link>http://www.nickng.io/projects/golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/projects/golang/</guid>
+      <description>The aim of this line of work is to verify channel-based concurrency interaction in Go using techniques from the research area of process calculi and type systems.
+Tools nickng/dingo-hunter is a static analyser for Go based on the go/ssa package from the Go project. The tool itself is designed to be an interface to Go programs, performing type inference/model extraction from Go code. Current analysis frontends include:
+ Communicating Finite State Machines (CFSMs) modelling goroutines.</description>
+    </item>
+    
+    <item>
+      <title>Multiparty Session C</title>
+      <link>http://www.nickng.io/projects/sessionc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/projects/sessionc/</guid>
+      <description> Session C is a communication-safe programming framework which combines multiparty session types with the C programming language.
+Publications  Session Types: Towards safe and fast reconfigurable programming Multiparty Session C: Safe Parallel Programming with Message Optimisation  Related resources  Session C on GitHub (wiki) or as libraries Google PhD Poster Competition 2013 entry Runner-up, 3rd year category Session C (old repository) on Google code Scribble project  </description>
+    </item>
+    
+    <item>
+      <title>Multiparty Session C: Safe Parallel Programming with Message Optimisation
+</title>
+      <link>http://www.nickng.io/publications/sessionc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/sessionc/</guid>
+      <description>Abstract This paper presents a new efficient programming toolchain for message passing-based parallel algorithms which can ensure, for any typable programs and for any execution path, a full guarantee of deadlock-freedom, communication safety and global progress through satatic checking. The methodology is embodied as a multiparty session-based programming environment for C and its runtime libraries which we call Session C.
+Programming starts from specifying a multiparty topology for a target parallel algorithm, such as a ring, wraparound mesh and butterfly topology, in the shape of a global protocol using a protocol description language.</description>
+    </item>
+    
+    <item>
+      <title>Pabble protocol description language</title>
+      <link>http://www.nickng.io/projects/pabble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/projects/pabble/</guid>
+      <description>Pabble is a protocol description language, parametric variant of the Scribble language, extended for modelling communication in parallel applications.
+Publications  Pabble: Parameterised Scribble for Parallel Programming Pabble: parameterised Scribble Protocols by Default: Safe MPI Code Generation based on Session Types  Related resources  Scribble project Poster for code generation work  Pabble examples Pabble protocols: dwarfs The following Pabble protocols are examples chosen from am evaluation metic for parallel programming models and architectues called dwarfs from UC Berkeley, details available from their CACM article.</description>
+    </item>
+    
+    <item>
+      <title>Pabble: Parameterised Scribble for Parallel Programming
+</title>
+      <link>http://www.nickng.io/publications/pabble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/pabble/</guid>
+      <description>Abstract Many parallel and distributed message-passing programs are written in a parametric way over available resources, in particular the number of nodes and their topologies, so that a single parallel program can scale over different environments. This paper presents a parameterised protocol description language, Pabble, which can guarantee safety and progress in a large class of practical, complex parameterised message-passing programs through static checking.
+Pabble can describe an overall interaction topology, using a concise and expressive notation, designed for a variable number of participants arranged in multiple dimensions.</description>
+    </item>
+    
+    <item>
+      <title>Protocols by Default: Safe MPI Code Generation based on Session Types
+</title>
+      <link>http://www.nickng.io/publications/pabble-mpi-codegen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/pabble-mpi-codegen/</guid>
+      <description>Abstract This paper presents a code generation framework for type-safe and deadlock-free Message Passing Interface (MPI) programs. The code generation process starts with the definition of the global topology using a protocol specification language based on parameterised multiparty session types (MPST). An MPI parallel program backbone is automatically generated from the global specification. The backbone code can then be merged with the sequential code describing the application behaviour, resulting in a complete MPI program.</description>
+    </item>
+    
+    <item>
+      <title>Safe Parallel Programming in Session Java</title>
+      <link>http://www.nickng.io/publications/sj-parallel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/sj-parallel/</guid>
+      <description>Abstract The session-typed programming language Session Java (SJ) has proved to be an effective tool for distributed programming, promoting structured programming for communications and compile-time safety.
+This paper investigates the use of SJ for session-typed parallel programming, and introduces new language primitives for chained iteration&amp;gt; and multi-channel communication. These primitives allow the efficient coordination of parallel computation across multiple processes, thus enabling SJ to express the complex communication topologies often used by parallel algorithms.</description>
+    </item>
+    
+    <item>
+      <title>Scalable Session Programming for Heterogeneous High-Performance Systems</title>
+      <link>http://www.nickng.io/publications/scalable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/scalable/</guid>
+      <description>Abstract This paper introduces a programming framework based on the theory of session types for safe and scalable parallel designs. Session-based languages can offer a clear and tractable framework to describe communications between parallel components and guarantee communication-safety and deadlock-freedom by compile-time type checking and parallel MPI code generation. Many representative communication topologies such as ring or scatter-gather can be programmed and verified in session-based programming languages.
+We use a case study involving N-body simulation to illustrate the session-based programming style.</description>
+    </item>
+    
+    <item>
+      <title>Session Types: Towards safe and fast reconfigurable programming
+</title>
+      <link>http://www.nickng.io/publications/heart12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/heart12/</guid>
+      <description>Abstract This paper introduces a new programming framework based on the theory of session types for safe, recongurable parallel designs.
+We apply the session type theory to C and Java programming languages and demonstrate that the sessionbased languages can offer a clear and tractable framework to describe communications between parallel components and guarantee communication-safety and deadlock-freedom by compile-time type checking.
+Many representative communication topologies such as a ring or scatter-gather can be programmed and verified in session-based programming languages.</description>
+    </item>
+    
+    <item>
+      <title>Static Deadlock Detection for Concurrent Go by Global Session Graph Synthesis</title>
+      <link>http://www.nickng.io/publications/go-synthesis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/publications/go-synthesis/</guid>
+      <description>Abstract Go is a programming language developed at Google, with channel-based concurrent features based on CSP. Go can detect global communication deadlocks at runtime when all threads of execution are blocked, but deadlocks in other paths of execution could be undetected. We present a new static analyser for concurrent Go code to find potential communication errors such as communication mismatch and deadlocks at compile time. Our tool extracts the communication operations as session types, which are then converted into Communicating Finite State Machines (CFSMs).</description>
+    </item>
+    
+    <item>
+      <title>async-π</title>
+      <link>http://www.nickng.io/projects/asyncpi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/projects/asyncpi/</guid>
+      <description>nickng/asyncpi is a mini-language modelled after the asynchronous π-calculus implemented in Go intended to be used as a teaching language.
+The basic syntax is given below:
+P,Q ::= 0 nil process | P|Q parallel composition of P and Q | (new a)P generation of a with scope P | !P replication of P, infinite parallel composition P|P|P... | u&amp;lt;v&amp;gt; output of v on channel u | u(x).P input of distinct variables x on u, with continuation P</description>
+    </item>
+    
+  </channel>
+</rss>

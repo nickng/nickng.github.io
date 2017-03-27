@@ -1,0 +1,31 @@
+---
+head:
+  class: nbody.mc.Head
+  client:
+    - name: next
+      protocol: p_next
+      service: prev@body
+    - name: tail
+      protocol: p_tail
+      service: head@tail
+
+body:
+  class: nbody.mc.Body
+  client:
+    - name: next
+      protocol: p_next
+      service: prev@tail
+  server:
+    - name: prev
+      protocol: p_prev
+      socket: 'tcp://axel05:42421'
+
+tail:
+  class: nbody.mc.Tail
+  server:
+    - name: prev
+      protocol: p_prev
+      socket: 'tcp://axel06:42422'
+    - name: head
+      protocol: p_head
+      socket: 'tcp://axel06:42423'

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicholas Ng - Safe Parallel Programming in Session Java</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+<link href='/css/style.min.css' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
+
+<meta name="generator" content="Hugo 0.20-DEV" />
+</head>
+<body>
+<header>
+<div class='container'><h1>Nicholas Ng</h1></div>
+<nav id='main-nav'>
+  <ul class='container'>
+    
+    
+    
+    
+    
+    <li>
+    
+      <a href='/'>Home </a>
+    </li>
+    
+    
+    
+    
+    <li>
+    
+      <a href='/projects/'>Projects </a>
+    </li>
+    
+    
+    
+    
+    <li class='active'>
+    
+      <a href='/publications/'>Publications </a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+<div class='container'>
+
+
+<h1>Safe Parallel Programming in Session Java</h1>
+<h3>13th International Conference on Coordination Models and Languages (COORDINATION 2011)</h3>
+<ul><li>Nicholas Ng</li>
+<li>Nobuko Yoshida</li>
+<li>Oliver Pernet</li>
+<li>Raymond Hu</li>
+<li>Yiannos Kryftis</li>
+</ul>
+
+
+<h3 id="abstract">Abstract</h3>
+
+<p>The session-typed programming language Session Java (SJ) has proved to be an
+effective tool for distributed programming, promoting structured programming for
+communications and compile-time safety.</p>
+
+<p>This paper investigates the use of SJ for session-typed parallel programming,
+and introduces new language primitives for chained iteration&gt; and multi-channel
+communication. These primitives allow the efficient coordination of parallel
+computation across multiple processes, thus enabling SJ to express the complex
+communication topologies often used by parallel algorithms. We demonstrate that
+the new primitives yield clearer and safer code for pipeline, ring and mesh
+topologies through implementations of representative parallel algorithms.</p>
+
+<p>We then present a semantics and session typing system including the new
+primitives, and prove type soundness and deadlock-freedom for our
+implementations. The benchmark results show that the new SJ is substantially
+faster than the original SJ and performs competitively against MPJ Express used
+as reference.</p>
+
+<p><a href="http://dx.doi.org/10.1007/978-3-642-21464-6_8">Published version via DOI</a> | <a href="main.pdf">Paper</a> | <a href="long.pdf">Long version</a> | <a href="slides.pdf">Slides</a> | <a href="http://mrg.doc.ic.ac.uk/publications/safe-parallel-programming-with-session-java/">www</a></p>
+
+<h3 id="benchmarks">Benchmarks</h3>
+
+<h4 id="mpjexpress-vs-sj-vs-sj-with-multi-channel-primitives">MPJExpress vs. SJ vs. SJ with multi-channel primitives</h4>
+
+<p><img src="./nbody-ring/nbody.png" alt="MPJExpress vs. SJ vs. MC SJ" /></p>
+
+<p>Comparison of implementations of n-body simulation in SJ with and without multi-channel primitives.</p>
+
+<ul>
+<li>SJ: N-body simulation with SJ using only single-channel primitives, by opening and closing a session in each iteration.</li>
+<li>Multi-channel SJ: N-body simulation with new multi-channel primitives.</li>
+<li>Data files: <a href="./nbody-ring/MPJ.dat">MPJ Express</a> | <a href="./nbody-ring/Old.dat">SJ</a> | <a href="./nbody-ring/MC.dat">Multi-channel SJ</a></li>
+<li>Source files: <a href="./src/nbody/Mpj.java">MPJExpress</a> | <a href="./src/nbody/old/">SJ</a> | <a href="./src/nbody/mc/">Multi-channel SJ</a> |
+<a href="./conf/ring.yaml" title="Ring topology configuration file">Topology configuration</a> [<a href="http://www.yaml.org/" title="YAML Ain't Markup Language">YAML</a>]</li>
+</ul>
+
+<h4 id="mpjexpress-vs-sj-vs-sj-with-multi-channel-primitives-1">MPJExpress vs. SJ vs. SJ with multi-channel primitives</h4>
+
+<p><img src="./jacobi-mesh/jacobi.png" alt="MPJExpress vs. SJ vs. MC SJ" /></p>
+
+<p>Comparison of implementations of a Jacobi method for solving the Discrete Poisson Equation in SJ with and without multi-channel primitives.</p>
+
+<ul>
+<li>SJ: Jacobi-method implementation with SJ using only single-channel primitives, by opening and closing a session in each iteration.</li>
+<li>Multi-channel SJ: Jacobi method implementaion with new multi-channel primitives.</li>
+<li>Data files: <a href="./jacobi-mesh/MPJ.dat">MPJ Express</a> | <a href="./jacobi-mesh/Old.dat">SJ</a> | <a href="./jacobi-mesh/MC.dat">Multi-channel SJ</a></li>
+<li>Source files: <a href="./src/jacobi/Mpj.java">MPJExpress</a> | <a href="./src/jacobi/old/">SJ</a> | <a href="./src/jacobi/mc/">Multi-channel SJ</a> |
+<a href="./conf/mesh.yaml" title="MEsh topology configuration file">Topology configuration</a> [<a href="http://www.yaml.org/" title="YAML Ain't Markup Language">YAML</a>]</li>
+</ul>
+
+<h3 id="topology-verifier">Topology Verifier</h3>
+
+<ul>
+<li>Source files [ <a href="./src/verifier.tar.gz">tgz</a> ]</li>
+<li>The verifier is designed to be used with the SJ compiler</li>
+</ul>
+
+<h3 id="related-resources">Related Resources</h3>
+
+<ul>
+<li>The SJ compiler and runtime are <a href="http://code.google.com/p/sessionj">available on Google Code</a>.
+Additional information can be found on the <a href="http://www.doc.ic.ac.uk/~rhu/sessionj-deleg.html">Session Java</a> page.</li>
+<li>Masters Thesis:
+<a href="'Masters Thesis - Nicholas Ng' /~cn06/individual-project/">High performance parallel design based on session programming</a>.
+Nicholas Ng, Imperial College London, June 2010.</li>
+<li>Masters Thesis:
+<a href="'Masters Thesis - Yiannos Kryftis' http://www.doc.ic.ac.uk/~yk208/project/">Session-based Programming for Message-Passing-based Parallel Algorithms</a>.
+Yiannos Kryftis, Imperial College London, September 2009.</li>
+</ul>
+
+</div>
+<footer>
+  <ul class='container'>
+    <li>Contact</li>
+    <li><a href='mailto:nickng@imperial.ac.uk'>nickng@imperial.ac.uk</a></li>
+    <li><a href='https://twitter.com/nicholascwng'>@nicholascwng</a></li>
+    <li><a href='https://linkedin.com/in/nicholascwng'>nicholascwng</a></li>
+    <li><a href='https://github.com/nickng'>nickng</a></li>
+    <li><a href='https://bitbucket.org/nickng'>nickng</a></li>
+  </ul>
+</footer>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-1241840-8', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+

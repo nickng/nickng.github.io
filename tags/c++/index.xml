@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Nicholas Ng</title>
+    <link>http://www.nickng.io/tags/c&#43;&#43;/index.xml</link>
+    <description>Recent content in C&#43;&#43; on Nicholas Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <atom:link href="http://www.nickng.io/tags/c&#43;&#43;/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pabble protocol description language</title>
+      <link>http://www.nickng.io/projects/pabble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/projects/pabble/</guid>
+      <description>Pabble is a protocol description language, parametric variant of the Scribble language, extended for modelling communication in parallel applications.
+Publications  Pabble: Parameterised Scribble for Parallel Programming Pabble: parameterised Scribble Protocols by Default: Safe MPI Code Generation based on Session Types  Related resources  Scribble project Poster for code generation work  Pabble examples Pabble protocols: dwarfs The following Pabble protocols are examples chosen from am evaluation metic for parallel programming models and architectues called dwarfs from UC Berkeley, details available from their CACM article.</description>
+    </item>
+    
+  </channel>
+</rss>
