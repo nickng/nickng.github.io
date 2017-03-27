@@ -14,8 +14,141 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/projects/pabble/</guid>
-      <description>Pabble is a protocol description language, parametric variant of the Scribble language, extended for modelling communication in parallel applications.
-Publications  Pabble: Parameterised Scribble for Parallel Programming Pabble: parameterised Scribble Protocols by Default: Safe MPI Code Generation based on Session Types  Related resources  Scribble project Poster for code generation work  Pabble examples Pabble protocols: dwarfs The following Pabble protocols are examples chosen from am evaluation metic for parallel programming models and architectues called dwarfs from UC Berkeley, details available from their CACM article.</description>
+      <description>
+
+&lt;p&gt;Pabble is a protocol description language, parametric variant of the
+&lt;a href=&#34;http://scribble.org&#34;&gt;Scribble&lt;/a&gt; language, extended for modelling communication
+in parallel applications.&lt;/p&gt;
+
+&lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble-for-parallel-programming/&#34;&gt;Pabble: Parameterised Scribble for Parallel Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble/&#34;&gt;Pabble: parameterised Scribble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/safe-mpi-code-generation-based-on-session-types/&#34;&gt;Protocols by Default: Safe MPI Code Generation based on Session Types&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;related-resources&#34;&gt;Related resources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://scribble.org&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;google-poster.pdf&#34;&gt;Poster&lt;/a&gt; for code generation work&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;pabble-examples&#34;&gt;Pabble examples&lt;/h2&gt;
+
+&lt;h3 id=&#34;pabble-protocols-dwarfs&#34;&gt;Pabble protocols: dwarfs&lt;/h3&gt;
+
+&lt;p&gt;The following &lt;a href=&#34;http://mrg.doc.ic.ac.uk/tools/pabble/&#34;&gt;Pabble&lt;/a&gt; protocols are examples chosen
+from am evaluation metic for parallel programming models and architectues called
+&lt;a href=&#34;http://view.eecs.berkeley.edu&#34;&gt;dwarfs&lt;/a&gt; from UC Berkeley, details available from
+their &lt;a href=&#34;http://dl.acm.org/citation.cfm?id=1562764.1562783&#34;&gt;CACM article&lt;/a&gt;.
+The article defines six categories of algorithmic patterns (called dwarfs)
+common in HPC applications: Structured Grid, Dense Matrix, Sparse Matrix,
+Spectral (FFT), Particle methods, and Unstructured Grid. Each of the protocols
+below belong to one of the categories.&lt;/p&gt;
+
+&lt;h4 id=&#34;n-body-simulation&#34;&gt;N-Body simulation&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pabble&#34;&gt;global protocol NBody(role W[0..N]) {
+    rec LOOP {
+        (float) from Worker[i:0..N-1] to W[i+1];
+        (float) from Worker[N] to W[0];
+        /* Calculate Velocity */
+        continue LOOP; 
+    }
+    /* Calculate Step */
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;dynamic-load-balancing&#34;&gt;Dynamic load balancing&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pabble&#34;&gt;global protocol LoadBalancing(role Worker[0..N]) {
+    rec REPEAT {
+        oneof (Worker[i in 1..N]) {
+            request() from Worker[i] to Worker[0];
+            choice at Worker[0] {
+                finish() from Worker[0] to Worker[i];
+                foreach (x:1..N except i) {
+                    request() from Worker[x] to Worker[0];
+                    finish() from Worker[0] to Worker[x]; 
+                }
+            } or {
+                reply() from Worker[0] to Worker[i]; continue REPEAT;
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;dense-matrix-vector-multiplication&#34;&gt;Dense matrix-vector multiplication&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pabble&#34;&gt;global protocol DenseMatVec(role Worker[0..N]) {
+    // Scatter Matrix A
+    foreach (i:1..N) {
+        LBound(int) from Worker[0] to Worker[i];
+        UBound(int) from Worker[0] to Worker[i];
+        Data(double) from Worker[0] to Worker[i];
+    }
+    // Scatter Vector B
+    (double) from Worker[0] to Worker[1..N];
+    // --- Perform calculation ---
+    // Gather data
+    (double) from Worker[1..N] to Worker[0];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;sparse-matrix-vector-multiplication&#34;&gt;Sparse matrix-vector multiplication&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pabble&#34;&gt;global protocol SparseMatVec(role PE[0..N]) {
+    /* Distribute data */
+    (int) from W[0] to W[1..N]; // row_ptr
+    (int) from W[0] to W[1..N]; // col_ind
+    (double) from W[0] to W[1..N]; // vals
+    (double) from W[0] to W[1..N]; // vector
+    /* Output vector */
+    (double) from W[1..N] to W[0];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;fast-fourier-transformation-fft&#34;&gt;Fast-Fourier Transformation (FFT)&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pabble&#34;&gt;const N = 3;
+global protocol FFT(role W[0..7]) {
+    foreach (r:0..N-1) {
+        foreach (i:0..2&amp;lt;&amp;lt;N-1) {
+            Label(int) from Worker[i] to Worker[i - (i/1&amp;lt;&amp;lt;r)%2 * 1&amp;lt;&amp;lt;(r+1) + 1&amp;lt;&amp;lt;r];
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;linear-equation-solver&#34;&gt;Linear Equation Solver&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pabble&#34;&gt;global protocol Solver(role W[1..N][1..N], group Col={W[1..N][1]}) {
+    rec CONVERGE {
+        Ring(double) from W[i:1..N][j:1..N-1] to W[i][j+1];
+        Ring(double) from W[i:1..N][N] to W[i][1];
+
+        // Vertical propagation
+        (double) from Col to Col;
+        continue CONVERGE; 
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;monte-carlo-pi-simulation&#34;&gt;Monte-Carlo Pi simulation&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-pabble&#34;&gt;global protocol MonteCarloPi(role Worker[0..N]) {
+    // Calculation per process
+    Count(int) from Worker[0] to Worker[1..N];
+    Result(double) from Worker[1..N] to Worker[0];
+    // Final result calculated at Worker[0];
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
   </channel>

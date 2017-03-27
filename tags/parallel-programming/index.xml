@@ -14,8 +14,28 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/projects/sessionc/</guid>
-      <description> Session C is a communication-safe programming framework which combines multiparty session types with the C programming language.
-Publications  Session Types: Towards safe and fast reconfigurable programming Multiparty Session C: Safe Parallel Programming with Message Optimisation  Related resources  Session C on GitHub (wiki) or as libraries Google PhD Poster Competition 2013 entry Runner-up, 3rd year category Session C (old repository) on Google code Scribble project  </description>
+      <description>
+
+&lt;p&gt;Session C is a communication-safe programming framework which combines
+multiparty session types with the C programming language.&lt;/p&gt;
+
+&lt;h2 id=&#34;publications&#34;&gt;Publications&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/session-types-towards-safe-and-fast-reconfigurable-programming/&#34;&gt;Session Types: Towards safe and fast reconfigurable programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/multiparty-session-c-safe-parallel-programming-with-message-optimisation/&#34;&gt;Multiparty Session C: Safe Parallel Programming with Message Optimisation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;related-resources&#34;&gt;Related resources&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://github.com/nickng/sessc/&#34;&gt;Session C&lt;/a&gt; on GitHub (&lt;a href=&#34;http://github.com/nickng/sessc/wiki&#34;&gt;wiki&lt;/a&gt;) or &lt;a href=&#34;http://github.com/sessionc/&#34;&gt;as libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;google-poster.pdf&#34;&gt;Google PhD Poster Competition 2013 entry&lt;/a&gt;
+Runner-up, 3rd year category&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sesscc.googlecode.com/&#34;&gt;Session C (old repository)&lt;/a&gt; on Google code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://scribble.org&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

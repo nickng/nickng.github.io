@@ -14,8 +14,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/projects/bibtex/</guid>
-      <description>nickng/bibtex is a BibTeX parser and pretty printer for Go. The main aim is the recreate a bibtex tool for the undocumented BibTeX format in a modern language that can be backwards compatible with the existing bibtex tool in the TeXLive latex distribution.
-See prettybib.nickng.io for a web-based interface.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/nickng/bibtex&#34;&gt;nickng/bibtex&lt;/a&gt; is a BibTeX parser and pretty
+printer for Go. The main aim is the recreate a bibtex tool for the undocumented
+BibTeX format in a modern language that can be backwards compatible with the
+existing &lt;code&gt;bibtex&lt;/code&gt; tool in the TeXLive latex distribution.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&#34;http://prettybib.nickng.io&#34;&gt;prettybib.nickng.io&lt;/a&gt; for a web-based interface.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://godoc.org/github.com/nickng/bibtex&#34;&gt;&lt;img src=&#34;https://godoc.org/github.com/nickng/bibtex?status.svg&#34; alt=&#34;GoDoc&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
