@@ -47,7 +47,16 @@
   </url>
   
   <url>
+    <loc>http://www.nickng.io/projects/individual-project/</loc>
+  </url>
+  
+  <url>
     <loc>http://www.nickng.io/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>http://www.nickng.io/tags/masters-project/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

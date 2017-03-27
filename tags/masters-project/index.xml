@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Masters Project on Nicholas Ng</title>
+    <link>http://www.nickng.io/tags/masters-project/index.xml</link>
+    <description>Recent content in Masters Project on Nicholas Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <atom:link href="http://www.nickng.io/tags/masters-project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>High performance parallel design based on session programming</title>
+      <link>http://www.nickng.io/projects/individual-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.nickng.io/projects/individual-project/</guid>
+      <description>
+
+&lt;h3 id=&#34;high-performance-parallel-design-based-on-session-programming&#34;&gt;High performance parallel design based on session programming&lt;/h3&gt;
+
+&lt;p&gt;Final year individual project,
+&lt;a href=&#34;http://www3.imperial.ac.uk/computing/teaching/prizes/2010/ug#4&#34;&gt;The Detica Prize for Technical Innovation&lt;/a&gt;, 2010&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Supervisor: &lt;a href=&#34;http://www.doc.ic.ac.uk/~yoshida&#34;&gt;Nobuko Yoshida&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Second marker: &lt;a href=&#34;http://www.doc.ic.ac.uk/~wl&#34;&gt;Wayne Luk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;abstract&#34;&gt;Abstract&lt;/h4&gt;
+
+&lt;p&gt;Session programming is a programming model based on the theory of session types,
+a typing system for pi-calculus.
+Session types is developed to model structured interaction between processes
+and correctly typed process will have the property of communication safety.
+Session Java (SJ) is a full implementation of session types in Java.
+In this project, we aim to introduce the session programming model to Axel,
+a heterogeneous cluster with both FPGAs and GPUs as hardware
+accelerators to design communication safe parallel algorithms.&lt;/p&gt;
+
+&lt;p&gt;We give an implementation of a parallel algorithm, n-body simulation,
+on the Axel cluster, using SJ and FPGAs.
+We also give a translation of our SJ n-body simulation into C to get a higher performance.
+We find good performance improvements in both implementations,
+without compromising safety property of our program.&lt;/p&gt;
+
+&lt;p&gt;Finally, we present a formalisation of two new multichannel SJ primitives for parallel programming.
+We use the formalisation to prove the correctness of our n-body implementation
+and generalise the proof to a ring topology used by parallel algorithms in SJ.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;report.pdf&#34;&gt;Final Report&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;presentation.pdf&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;related-resources&#34;&gt;Related resources&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.doc.ic.ac.uk/~wl/icprojects/session.html&#34;&gt;Project description&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Publication: &lt;a href=&#34;http://cc.doc.ic.ac.uk/projects/prj_axel/&#34;&gt;AXEL: heterogeneous cluster&lt;/a&gt;
+[ &lt;a href=&#34;http://www.doc.ic.ac.uk/~wl/papers/10/fpga10bt.pdf&#34;&gt;pdf&lt;/a&gt; ]&lt;/li&gt;
+&lt;li&gt;Publication: &lt;a href=&#34;http://www.doc.ic.ac.uk/~rhu/sessionj-deleg.html&#34;&gt;Session-based Distributed Programming in Java&lt;/a&gt;
+[ &lt;a href=&#34;http://www.doc.ic.ac.uk/~rhu/sessionj/hyh08session-based.pdf&#34;&gt;pdf&lt;/a&gt; ]&lt;/li&gt;
+&lt;li&gt;Software: &lt;a href=&#34;http://code.google.com/p/sessionj&#34;&gt;sessionj: Session programming with Java&lt;/a&gt;, &lt;a href=&#34;http://www.doc.ic.ac.uk/~rhu/sessionj.html&#34;&gt;Author&amp;rsquo;s page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www3.imperial.ac.uk/computing/teaching/ug/ug-distinguished-projects/2010&#34;&gt;Prize Winning and Distinguished Projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www3.imperial.ac.uk/computing/teaching/prizes/2010/ug&#34;&gt;Undergraduate Computing Prizes 2010&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Publication: &lt;a href=&#34;http://www.doc.ic.ac.uk/~omp08/sj_parallel/&#34;&gt;Safe Parallel Programming with Session Java&lt;/a&gt;,
+&lt;em&gt;Departmental Technical report DTR10-14, Oct 2010&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Publication: &lt;a href=&#34;http://www.nickng.io/publications/sj-parallel&#34;&gt;Safe Parallel Programming with Session Java&lt;/a&gt;,
+In &lt;em&gt;13th Int&amp;rsquo;l Conference on Coordination Models and Languages &lt;a href=&#34;http://discotec.ru.is/coordination/main&#34;&gt;COORDINATION&lt;/a&gt;), June 2011&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Publication: &lt;a href=&#34;http://www.nickng.io/publications/heart12/&#34;&gt;Session Types: Towards safe and fast reconfigurable programming&lt;/a&gt;,
+In &lt;em&gt;3rd Int&amp;rsquo;l Workshop on Highly-Efficient Accelerators and Reconfigurable Technologies (&lt;a href=&#34;http://www.cs.tsukuba.ac.jp/~yoshiki/heart/HEART2012/&#34;&gt;HEART&lt;/a&gt;), June 2012&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

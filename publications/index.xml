@@ -378,10 +378,10 @@ as reference.&lt;/p&gt;
 &lt;li&gt;The SJ compiler and runtime are &lt;a href=&#34;http://code.google.com/p/sessionj&#34;&gt;available on Google Code&lt;/a&gt;.
 Additional information can be found on the &lt;a href=&#34;http://www.doc.ic.ac.uk/~rhu/sessionj-deleg.html&#34;&gt;Session Java&lt;/a&gt; page.&lt;/li&gt;
 &lt;li&gt;Masters Thesis:
-&lt;a href=&#34;&#39;Masters Thesis - Nicholas Ng&#39; /~cn06/individual-project/&#34;&gt;High performance parallel design based on session programming&lt;/a&gt;.
+&lt;a href=&#34;http://www.nickng.io/projects/individual-project/&#34; title=&#34;Masters Thesis - Nicholas Ng&#34;&gt;High performance parallel design based on session programming&lt;/a&gt;.
 Nicholas Ng, Imperial College London, June 2010.&lt;/li&gt;
 &lt;li&gt;Masters Thesis:
-&lt;a href=&#34;&#39;Masters Thesis - Yiannos Kryftis&#39; http://www.doc.ic.ac.uk/~yk208/project/&#34;&gt;Session-based Programming for Message-Passing-based Parallel Algorithms&lt;/a&gt;.
+&lt;a href=&#34;http://www.doc.ic.ac.uk/~yk208/project/&#34; title=&#34;Masters Thesis - Yiannos Kryftis&#34;&gt;Session-based Programming for Message-Passing-based Parallel Algorithms&lt;/a&gt;.
 Yiannos Kryftis, Imperial College London, September 2009.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -453,7 +453,7 @@ with FPGA acceleration.&lt;/p&gt;
 &lt;h3 id=&#34;related-resources&#34;&gt;Related Resources&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Masters Thesis: &lt;a href=&#34;http://www.doc.ic.ac.uk/~cn06/individual-project/&#34; title=&#34;Masters Thesis - Nicholas Ng&#34;&gt;High performance parallel design based on session programming&lt;/a&gt;. Nicholas Ng, Imperial College London, June 2010.&lt;/li&gt;
+&lt;li&gt;Masters Thesis: &lt;a href=&#34;http://www.nickng.io/projects/individual-project/&#34; title=&#34;Masters Thesis - Nicholas Ng&#34;&gt;High performance parallel design based on session programming&lt;/a&gt;. Nicholas Ng, Imperial College London, June 2010.&lt;/li&gt;
 &lt;li&gt;The SJ compiler and runtime are &lt;a href=&#34;http://code.google.com/p/sessionj&#34;&gt;available on Google Code&lt;/a&gt;. Additional information can be found on the &lt;a href=&#34;http://www.doc.ic.ac.uk/~rhu/sessionj-deleg.html&#34;&gt;Session Java&lt;/a&gt; page.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://scribble.org/&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Session C source code is available on &lt;a href=&#34;http://sesscc.googlecode.com/&#34; title=&#34;Google Code: sesscc&#34;&gt;Google code hosting&lt;/a&gt;&lt;/li&gt;
