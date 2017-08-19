@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Main publications on Nicholas Ng</title>
-    <link>http://www.nickng.io/publications/index.xml</link>
+    <link>http://www.nickng.io/publications/</link>
     <description>Recent content in Main publications on Nicholas Ng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <atom:link href="http://www.nickng.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://www.nickng.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title></title>
@@ -23,9 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/sj-parallel/src/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; ../&#39;/&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
-</description>
+      <description> </description>
     </item>
     
     <item>
@@ -35,81 +35,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/sessionc/</guid>
-      <description>
-
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
-
-&lt;p&gt;This paper presents a new efficient programming toolchain for message
-passing-based parallel algorithms which can ensure, for any typable programs and
-for any execution path, a full guarantee of deadlock-freedom, communication
-safety and global progress through satatic checking. The methodology is embodied
-as a multiparty session-based programming environment for C and its runtime
-libraries which we call Session C.&lt;/p&gt;
-
-&lt;p&gt;Programming starts from specifying a multiparty topology for a target parallel
-algorithm, such as a ring, wraparound mesh and butterfly topology, in the shape
-of a global protocol using a protocol description language. From this global
-protocol, the projection algorithm generates endpoint protocols, based on which
-each endpoint C program is designed and implemented with a small number of
-concise session primitives. The endpoint protocol can further be refined to a
-more optimised protocol through subtyping for asynchronous communication, by
-which semantically equivalent optimised programs with the original safety
-guarantees can be obtained. The underlying theory can ensure that the complexity
-of the toolchain stays in polynomial time against the size of programs.&lt;/p&gt;
-
-&lt;p&gt;We apply this framework to representative parallel algorithms with complex
-communication topologies. The benchmark results show that Session C performs
-competitively against MPI.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dx.doi.org/10.1007/978-3-642-30561-0_15&#34;&gt;Published version via DOI&lt;/a&gt; |
-&lt;a href=&#34;paper.pdf&#34;&gt;Paper&lt;/a&gt; | &lt;a href=&#34;slides.pdf&#34;&gt;Slides&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/multiparty-session-c-safe-parallel-programming-with-message-optimisation/&#34;&gt;www&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;benchmarks&#34;&gt;Benchmarks&lt;/h3&gt;
-
-&lt;h4 id=&#34;n-body-simulation&#34;&gt;N-body simulation&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;./nbody/nbody.png&#34; alt=&#34;N-body simulation&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Comparison of implementations of N-body simulation in Session C with MPI.&lt;/p&gt;
-
-&lt;p&gt;Data files: &lt;a href=&#34;./nbody/sessc.dat&#34;&gt;Session C&lt;/a&gt; | &lt;a href=&#34;./nbody/mpi.dat&#34;&gt;MPI&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;linear-equation-solver&#34;&gt;Linear equation solver&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;./solver/solver.png&#34; alt=&#34;Linear equation solver&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Comparison of implementations of a parallel linear equation solver in Session C with MPI.&lt;/p&gt;
-
-&lt;p&gt;Data files: &lt;a href=&#34;./solver/sessc.dat&#34;&gt;Session C&lt;/a&gt; | &lt;a href=&#34;./solver/mpi.dat&#34;&gt;MPI&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;fast-fourier-transformation&#34;&gt;Fast Fourier Transformation&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;./fft/fft.png&#34; alt=&#34;Fast Fourier Transformation&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Comparison of implementations of Fast Fourier Transformation in Session C with MPI.&lt;/p&gt;
-
-&lt;p&gt;Data files: &lt;a href=&#34;./fft/sessc.dat&#34;&gt;Session C&lt;/a&gt; | &lt;a href=&#34;./fft/mpi.dat&#34;&gt;MPI&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;jacobi-solution-of-the-discrete-poisson-equation&#34;&gt;Jacobi solution of the Discrete Poisson Equation&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;./jacobi/jacobi.png&#34; alt=&#34;Jacobi solution&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Comparison of implementations of a Jacobi method for solving the Discrete Poisson Equation in Session C with MPI.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Data files: &lt;a href=&#34;./jacobi/sessc.dat&#34;&gt;Session C&lt;/a&gt; | &lt;a href=&#34;./jacobi/mpi.dat&#34;&gt;MPI&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;related-resources&#34;&gt;Related Resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://scribble.org/&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Session C source code is available on &lt;a href=&#34;http://sesscc.googlecode.com/&#34; title=&#34;Google Code: sesscc&#34;&gt;Google code hosting&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;An archived tarball can be found here (build for Linux x86_64) &lt;a href=&#34;./sesscc.tgz&#34;&gt;tgz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Abstract This paper presents a new efficient programming toolchain for message passing-based parallel algorithms which can ensure, for any typable programs and for any execution path, a full guarantee of deadlock-freedom, communication safety and global progress through satatic checking. The methodology is embodied as a multiparty session-based programming environment for C and its runtime libraries which we call Session C.
+Programming starts from specifying a multiparty topology for a target parallel algorithm, such as a ring, wraparound mesh and butterfly topology, in the shape of a global protocol using a protocol description language.</description>
     </item>
     
     <item>
@@ -119,142 +46,8 @@ competitively against MPI.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/pabble/</guid>
-      <description>
-
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
-
-&lt;p&gt;Many parallel and distributed message-passing programs are written in a
-parametric way over available resources, in particular the number of nodes and
-their topologies, so that a single parallel program can scale over different
-environments. This paper presents a parameterised protocol description language,
-Pabble, which can guarantee safety and progress in a large class of practical,
-complex parameterised message-passing programs through static checking.&lt;/p&gt;
-
-&lt;p&gt;Pabble can describe an overall interaction topology, using a concise and
-expressive notation, designed for a variable number of participants arranged in
-multiple dimensions. These parameterised protocols in turn automatically
-generate local protocols for type checking parameterised MPI programs for
-communication safety and deadlock freedom. In spite of undecidability of
-endpoint projection and type checking in the underlying parameterised session
-type theory, our method guarantees the termination of endpoint projection and
-type checking.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;An extended version was published in the Journal of Service Oriented
-Computing and Architecture (SOCA)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dx.doi.org/10.1109/PDP.2014.20&#34;&gt;Published version via DOI&lt;/a&gt; | &lt;a href=&#34;paper.pdf&#34;&gt;Paper&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble-for-parallel-programming/&#34;&gt;www&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble/&#34;&gt;www (journal)&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;related-resources&#34;&gt;Related Resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://scribble.org&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Pabble tools source code available on
-&lt;a href=&#34;https://github.com/sessionc&#34;&gt;GitHub code hosting&lt;/a&gt;
-(Tool is part of &lt;a href=&#34;https://github.com/sessionc/libscribble&#34;&gt;libscribble&lt;/a&gt;
-and &lt;a href=&#34;https://github.com/sessionc/libsesstype&#34;&gt;libsesstype&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;sample-protocols&#34;&gt;Sample protocols&lt;/h3&gt;
-
-&lt;h4 id=&#34;n-body-simulation&#34;&gt;N-Body simulation&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;global protocol NBody(role W[0..N]) {
-    rec LOOP {
-        (float) from Worker[i:0..N-1] to W[i+1];
-        (float) from Worker[N] to W[0];
-        /* Calculate Velocity */
-        continue LOOP; 
-    }
-    /* Calculate Step */
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;dynamic-load-balancing&#34;&gt;Dynamic load balancing&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;global protocol LoadBalancing(role Worker[0..N]) {
-    rec REPEAT {
-        oneof (Worker[i in 1..N]) {
-            request() from Worker[i] to Worker[0];
-            choice at Worker[0] {
-                finish() from Worker[0] to Worker[i];
-                foreach (x:1..N except i) {
-                    request() from Worker[x] to Worker[0];
-                    finish() from Worker[0] to Worker[x]; 
-                }
-            } or {
-                reply() from Worker[0] to Worker[i]; continue REPEAT;
-            }
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;dense-matrix-vector-multiplication&#34;&gt;Dense matrix-vector multiplication&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;global protocol DenseMatVec(role Worker[0..N]) {
-    // Scatter Matrix A
-    foreach (i:1..N) {
-        LBound(int) from Worker[0] to Worker[i];
-        UBound(int) from Worker[0] to Worker[i];
-        Data(double) from Worker[0] to Worker[i];
-    }
-    // Scatter Vector B
-    (double) from Worker[0] to Worker[1..N];
-    // --- Perform calculation ---
-    // Gather data
-    (double) from Worker[1..N] to Worker[0];
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;sparse-matrix-vector-multiplication&#34;&gt;Sparse matrix-vector multiplication&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;global protocol SparseMatVec(role PE[0..N]) {
-    /* Distribute data */
-    (int) from W[0] to W[1..N]; // row_ptr
-    (int) from W[0] to W[1..N]; // col_ind
-    (double) from W[0] to W[1..N]; // vals
-    (double) from W[0] to W[1..N]; // vector
-    /* Output vector */
-    (double) from W[1..N] to W[0];
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;fast-fourier-transformation-fft&#34;&gt;Fast-Fourier Transformation (FFT)&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;const N = 3;
-global protocol FFT(role W[0..7]) {
-    foreach (r:0..N-1) {
-        foreach (i:0..2&amp;lt;&amp;lt;N-1) {
-            Label(int) from Worker[i] to Worker[i - (i/1&amp;lt;&amp;lt;r)%2 * 1&amp;lt;&amp;lt;(r+1) + 1&amp;lt;&amp;lt;r];
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;linear-equation-solver&#34;&gt;Linear Equation Solver&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;global protocol Solver(role W[1..N][1..N], group Col={W[1..N][1]}) {
-    rec CONVERGE {
-        Ring(double) from W[i:1..N][j:1..N-1] to W[i][j+1];
-        Ring(double) from W[i:1..N][N] to W[i][1];
-
-        // Vertical propagation
-        (double) from Col to Col;
-        continue CONVERGE; 
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;monte-carlo-pi-simulation&#34;&gt;Monte-Carlo Pi simulation&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;global protocol MonteCarloPi(role Worker[0..N]) {
-    // Calculation per process
-    Count(int) from Worker[0] to Worker[1..N];
-    Result(double) from Worker[1..N] to Worker[0];
-    // Final result calculated at Worker[0];
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Abstract Many parallel and distributed message-passing programs are written in a parametric way over available resources, in particular the number of nodes and their topologies, so that a single parallel program can scale over different environments. This paper presents a parameterised protocol description language, Pabble, which can guarantee safety and progress in a large class of practical, complex parameterised message-passing programs through static checking.
+Pabble can describe an overall interaction topology, using a concise and expressive notation, designed for a variable number of participants arranged in multiple dimensions.</description>
     </item>
     
     <item>
@@ -264,45 +57,7 @@ global protocol FFT(role W[0..7]) {
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/pabble-mpi-codegen/</guid>
-      <description>
-
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
-
-&lt;p&gt;This paper presents a code generation framework for type-safe and
-deadlock-free Message Passing Interface (MPI) programs. The code
-generation process starts with the definition of the global topology
-using a protocol specification language based on parameterised
-multiparty session types (MPST). An MPI parallel program backbone is
-automatically generated from the global specification. The backbone
-code can then be merged with the sequential code describing the
-application behaviour, resulting in a complete MPI program. This
-merging process is fully automated through the use of an
-aspect-oriented compilation approach. In this way, programmers only
-need to supply the intended communication protocol and provide
-sequential code to automatically obtain parallelised programs that are
-guaranteed free from communication mismatch, type errors or deadlocks.
-The code generation framework also integrates an optimisation method
-that overlaps communication and computation, and can derive not only
-representative parallel programs with common parallel patterns (such
-as ring and stencil), but also distributed applications from any MPST
-protocols. We show that our tool generates efficient and scalable MPI
-applications, and improves productivity of programmers. For instance,
-our benchmarks involving representative parallel and
-application-specific patterns speed up sequential execution by up to
-31 times and reduce programming effort by an average of 39%.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dx.doi.org/10.1007/978-3-662-46663-6_11&#34;&gt;Published version via DOI&lt;/a&gt; |
-&lt;a href=&#34;main.pdf&#34;&gt;Paper with appendix&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/safe-mpi-code-generation-based-on-session-types/&#34;&gt;www&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;related-resources&#34;&gt;Related Resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://scribble.org&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Pabble validation and projection tool: &lt;a href=&#34;https://github.com/sessionc/libsesstype&#34;&gt;libsesstype&lt;/a&gt; and &lt;a href=&#34;https://github.com/sessionc/libscribble&#34;&gt;libscribble&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sessionc/pabble-mpi&#34;&gt;Pabble-MPI generation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mrg.doc.ic.ac.uk/tools/pabble/&#34;&gt;Pabble project page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Abstract This paper presents a code generation framework for type-safe and deadlock-free Message Passing Interface (MPI) programs. The code generation process starts with the definition of the global topology using a protocol specification language based on parameterised multiparty session types (MPST). An MPI parallel program backbone is automatically generated from the global specification. The backbone code can then be merged with the sequential code describing the application behaviour, resulting in a complete MPI program.</description>
     </item>
     
     <item>
@@ -311,80 +66,8 @@ application-specific patterns speed up sequential execution by up to
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/sj-parallel/</guid>
-      <description>
-
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
-
-&lt;p&gt;The session-typed programming language Session Java (SJ) has proved to be an
-effective tool for distributed programming, promoting structured programming for
-communications and compile-time safety.&lt;/p&gt;
-
-&lt;p&gt;This paper investigates the use of SJ for session-typed parallel programming,
-and introduces new language primitives for chained iteration&amp;gt; and multi-channel
-communication. These primitives allow the efficient coordination of parallel
-computation across multiple processes, thus enabling SJ to express the complex
-communication topologies often used by parallel algorithms. We demonstrate that
-the new primitives yield clearer and safer code for pipeline, ring and mesh
-topologies through implementations of representative parallel algorithms.&lt;/p&gt;
-
-&lt;p&gt;We then present a semantics and session typing system including the new
-primitives, and prove type soundness and deadlock-freedom for our
-implementations. The benchmark results show that the new SJ is substantially
-faster than the original SJ and performs competitively against MPJ Express used
-as reference.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dx.doi.org/10.1007/978-3-642-21464-6_8&#34;&gt;Published version via DOI&lt;/a&gt; | &lt;a href=&#34;main.pdf&#34;&gt;Paper&lt;/a&gt; | &lt;a href=&#34;long.pdf&#34;&gt;Long version&lt;/a&gt; | &lt;a href=&#34;slides.pdf&#34;&gt;Slides&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/safe-parallel-programming-with-session-java/&#34;&gt;www&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;benchmarks&#34;&gt;Benchmarks&lt;/h3&gt;
-
-&lt;h4 id=&#34;mpjexpress-vs-sj-vs-sj-with-multi-channel-primitives&#34;&gt;MPJExpress vs. SJ vs. SJ with multi-channel primitives&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;./nbody-ring/nbody.png&#34; alt=&#34;MPJExpress vs. SJ vs. MC SJ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Comparison of implementations of n-body simulation in SJ with and without multi-channel primitives.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;SJ: N-body simulation with SJ using only single-channel primitives, by opening and closing a session in each iteration.&lt;/li&gt;
-&lt;li&gt;Multi-channel SJ: N-body simulation with new multi-channel primitives.&lt;/li&gt;
-&lt;li&gt;Data files: &lt;a href=&#34;./nbody-ring/MPJ.dat&#34;&gt;MPJ Express&lt;/a&gt; | &lt;a href=&#34;./nbody-ring/Old.dat&#34;&gt;SJ&lt;/a&gt; | &lt;a href=&#34;./nbody-ring/MC.dat&#34;&gt;Multi-channel SJ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Source files: &lt;a href=&#34;./src/nbody/Mpj.java&#34;&gt;MPJExpress&lt;/a&gt; | &lt;a href=&#34;./src/nbody/old/&#34;&gt;SJ&lt;/a&gt; | &lt;a href=&#34;./src/nbody/mc/&#34;&gt;Multi-channel SJ&lt;/a&gt; |
-&lt;a href=&#34;./conf/ring.yaml&#34; title=&#34;Ring topology configuration file&#34;&gt;Topology configuration&lt;/a&gt; [&lt;a href=&#34;http://www.yaml.org/&#34; title=&#34;YAML Ain&#39;t Markup Language&#34;&gt;YAML&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;mpjexpress-vs-sj-vs-sj-with-multi-channel-primitives-1&#34;&gt;MPJExpress vs. SJ vs. SJ with multi-channel primitives&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&#34;./jacobi-mesh/jacobi.png&#34; alt=&#34;MPJExpress vs. SJ vs. MC SJ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Comparison of implementations of a Jacobi method for solving the Discrete Poisson Equation in SJ with and without multi-channel primitives.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;SJ: Jacobi-method implementation with SJ using only single-channel primitives, by opening and closing a session in each iteration.&lt;/li&gt;
-&lt;li&gt;Multi-channel SJ: Jacobi method implementaion with new multi-channel primitives.&lt;/li&gt;
-&lt;li&gt;Data files: &lt;a href=&#34;./jacobi-mesh/MPJ.dat&#34;&gt;MPJ Express&lt;/a&gt; | &lt;a href=&#34;./jacobi-mesh/Old.dat&#34;&gt;SJ&lt;/a&gt; | &lt;a href=&#34;./jacobi-mesh/MC.dat&#34;&gt;Multi-channel SJ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Source files: &lt;a href=&#34;./src/jacobi/Mpj.java&#34;&gt;MPJExpress&lt;/a&gt; | &lt;a href=&#34;./src/jacobi/old/&#34;&gt;SJ&lt;/a&gt; | &lt;a href=&#34;./src/jacobi/mc/&#34;&gt;Multi-channel SJ&lt;/a&gt; |
-&lt;a href=&#34;./conf/mesh.yaml&#34; title=&#34;MEsh topology configuration file&#34;&gt;Topology configuration&lt;/a&gt; [&lt;a href=&#34;http://www.yaml.org/&#34; title=&#34;YAML Ain&#39;t Markup Language&#34;&gt;YAML&lt;/a&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;topology-verifier&#34;&gt;Topology Verifier&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Source files [ &lt;a href=&#34;./src/verifier.tar.gz&#34;&gt;tgz&lt;/a&gt; ]&lt;/li&gt;
-&lt;li&gt;The verifier is designed to be used with the SJ compiler&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;related-resources&#34;&gt;Related Resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The SJ compiler and runtime are &lt;a href=&#34;http://code.google.com/p/sessionj&#34;&gt;available on Google Code&lt;/a&gt;.
-Additional information can be found on the &lt;a href=&#34;http://www.doc.ic.ac.uk/~rhu/sessionj-deleg.html&#34;&gt;Session Java&lt;/a&gt; page.&lt;/li&gt;
-&lt;li&gt;Masters Thesis:
-&lt;a href=&#34;http://www.nickng.io/projects/individual-project/&#34; title=&#34;Masters Thesis - Nicholas Ng&#34;&gt;High performance parallel design based on session programming&lt;/a&gt;.
-Nicholas Ng, Imperial College London, June 2010.&lt;/li&gt;
-&lt;li&gt;Masters Thesis:
-&lt;a href=&#34;http://www.doc.ic.ac.uk/~yk208/project/&#34; title=&#34;Masters Thesis - Yiannos Kryftis&#34;&gt;Session-based Programming for Message-Passing-based Parallel Algorithms&lt;/a&gt;.
-Yiannos Kryftis, Imperial College London, September 2009.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Abstract The session-typed programming language Session Java (SJ) has proved to be an effective tool for distributed programming, promoting structured programming for communications and compile-time safety.
+This paper investigates the use of SJ for session-typed parallel programming, and introduces new language primitives for chained iteration&amp;gt; and multi-channel communication. These primitives allow the efficient coordination of parallel computation across multiple processes, thus enabling SJ to express the complex communication topologies often used by parallel algorithms.</description>
     </item>
     
     <item>
@@ -393,30 +76,8 @@ Yiannos Kryftis, Imperial College London, September 2009.&lt;/li&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/scalable/</guid>
-      <description>
-
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
-
-&lt;p&gt;This paper introduces a programming framework based on the theory of session types for safe and scalable parallel designs. Session-based languages can offer a clear and tractable framework to describe communications between parallel components and guarantee communication-safety and deadlock-freedom by compile-time type checking and parallel MPI code generation. Many representative communication topologies such as ring or scatter-gather can be programmed and verified in session-based programming languages.&lt;/p&gt;
-
-&lt;p&gt;We use a case study involving N-body simulation to illustrate the session-based programming style. Finally, we outline a proposal to integrate session programming with heterogeneous systems for edcient and communication-safe parallel applications by a combination of code generation and type checking.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Presented in 2nd International Workshop on Behavioural Types (&lt;a href=&#34;http://beat2.behavioural-types.eu/&#34;&gt;BEAT2&lt;/a&gt;), September 2013&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dx.doi.org/10.1007/97803-319-05032-4_7&#34;&gt;Published version via DOI&lt;/a&gt; |
-&lt;a href=&#34;paper.pdf&#34;&gt;Paper&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/scalable-session-programming-for-heterogeneous-high-performance-systems/&#34;&gt;www&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;related-resources&#34;&gt;Related resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://scribble.org&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Session C programming framework source code is available on
-&lt;a href=&#34;https://github.com/sessionc&#34;&gt;GitHub&lt;/a&gt;
-&lt;a href=&#34;https://github.com/nickng/sessc&#34;&gt;Scribble/ZMQ toolchain&lt;/a&gt;
-and
-&lt;a href=&#34;https://github.com/sessionc&#34;&gt;Pabble/MPI toolchain&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Abstract This paper introduces a programming framework based on the theory of session types for safe and scalable parallel designs. Session-based languages can offer a clear and tractable framework to describe communications between parallel components and guarantee communication-safety and deadlock-freedom by compile-time type checking and parallel MPI code generation. Many representative communication topologies such as ring or scatter-gather can be programmed and verified in session-based programming languages.
+We use a case study involving N-body simulation to illustrate the session-based programming style.</description>
     </item>
     
     <item>
@@ -426,39 +87,9 @@ and
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/heart12/</guid>
-      <description>
-
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
-
-&lt;p&gt;This paper introduces a new programming framework based on the theory of session
-types for safe, recongurable parallel designs.&lt;/p&gt;
-
-&lt;p&gt;We apply the session type theory to C and Java programming languages and
-demonstrate that the sessionbased languages can offer a clear and tractable
-framework to describe communications between parallel components and guarantee
-communication-safety and deadlock-freedom by compile-time type checking.&lt;/p&gt;
-
-&lt;p&gt;Many representative communication topologies such as a ring or scatter-gather
-can be programmed and verified in session-based programming languages. Case
-studies involving N-body simulation and K-means clustering are used to
-illustrate the session-based programming style and to demonstrate that the
-session-based languages perform competitively against MPI counterparts in an
-FPGA-based heterogeneous cluster, as well as the potential of integrating them
-with FPGA acceleration.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Also in &lt;a href=&#34;http://dl.acm.org/sigarch/newsletter&#34;&gt;ACM SIGARCH Computer Architecture News (CAN)&lt;/a&gt; Volume 40 Issue 5&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dx.doi.org/10.1145/2460216.2460221&#34;&gt;Published version via DOI&lt;/a&gt; | &lt;a href=&#34;paper.pdf&#34;&gt;Paper&lt;/a&gt; | &lt;a href=&#34;slides.pdf&#34;&gt;Slides&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/session-types-towards-safe-and-fast-reconfigurable-programming/&#34;&gt;www&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;related-resources&#34;&gt;Related Resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Masters Thesis: &lt;a href=&#34;http://www.nickng.io/projects/individual-project/&#34; title=&#34;Masters Thesis - Nicholas Ng&#34;&gt;High performance parallel design based on session programming&lt;/a&gt;. Nicholas Ng, Imperial College London, June 2010.&lt;/li&gt;
-&lt;li&gt;The SJ compiler and runtime are &lt;a href=&#34;http://code.google.com/p/sessionj&#34;&gt;available on Google Code&lt;/a&gt;. Additional information can be found on the &lt;a href=&#34;http://www.doc.ic.ac.uk/~rhu/sessionj-deleg.html&#34;&gt;Session Java&lt;/a&gt; page.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://scribble.org/&#34;&gt;Scribble project&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Session C source code is available on &lt;a href=&#34;http://sesscc.googlecode.com/&#34; title=&#34;Google Code: sesscc&#34;&gt;Google code hosting&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Abstract This paper introduces a new programming framework based on the theory of session types for safe, recongurable parallel designs.
+We apply the session type theory to C and Java programming languages and demonstrate that the sessionbased languages can offer a clear and tractable framework to describe communications between parallel components and guarantee communication-safety and deadlock-freedom by compile-time type checking.
+Many representative communication topologies such as a ring or scatter-gather can be programmed and verified in session-based programming languages.</description>
     </item>
     
     <item>
@@ -467,37 +98,7 @@ with FPGA acceleration.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.nickng.io/publications/go-synthesis/</guid>
-      <description>
-
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
-
-&lt;p&gt;Go is a programming language developed at
-Google, with channel-based concurrent features based on CSP.  Go can
-detect global communication deadlocks at runtime when all threads of
-execution are blocked, but deadlocks in other paths of execution could
-be undetected.  We present a new static analyser for concurrent Go code
-to find potential communication errors such as communication mismatch
-and deadlocks at compile time. Our tool extracts the communication
-operations as session types, which are then converted into Communicating
-Finite State Machines (CFSMs).  Finally, we apply a recent theoretical
-result on choreography synthesis to generate a global graph representing
-the overall communication pattern of a concurrent program. If the
-synthesis is successful, then the program is free from communication
-errors.&lt;/p&gt;
-
-&lt;p&gt;We have implemented the technique in a tool, and applied it to analyse
-common Go concurrency patterns and an open source application with over
-700 lines of code.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dx.doi.org/10.1145/2892208.2892232&#34;&gt;Published version via DOI&lt;/a&gt; |
-&lt;a href=&#34;main.pdf&#34;&gt;Paper&lt;/a&gt; | &lt;a href=&#34;http://dingo-hunter.appspot.com/conf-cc-2016.slide&#34;&gt;Executable slides&lt;/a&gt; | &lt;a href=&#34;http://mrg.doc.ic.ac.uk/publications/static-deadlock-detection-for-concurrent-go-by-global-session-graph-synthesis/&#34;&gt;www&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;dingo-hunter&#34;&gt;dingo-hunter&lt;/h3&gt;
-
-&lt;p&gt;Our extraction tool dingo-hunter is available at &lt;a href=&#34;https://github.com/nickng/dingo-hunter&#34;&gt;GitHub&lt;/a&gt;, and require go version &lt;code&gt;go1.5&lt;/code&gt;.&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/ZVxYNeQLWDQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-</description>
+      <description>Abstract Go is a programming language developed at Google, with channel-based concurrent features based on CSP. Go can detect global communication deadlocks at runtime when all threads of execution are blocked, but deadlocks in other paths of execution could be undetected. We present a new static analyser for concurrent Go code to find potential communication errors such as communication mismatch and deadlocks at compile time. Our tool extracts the communication operations as session types, which are then converted into Communicating Finite State Machines (CFSMs).</description>
     </item>
     
   </channel>
