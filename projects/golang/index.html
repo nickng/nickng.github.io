@@ -61,7 +61,7 @@ in <a href="http://golang.org">Go</a> using techniques from the research area of
 <a href="https://en.wikipedia.org/wiki/Process_calculus">process calculi</a> and
 <a href="https://en.wikipedia.org/wiki/Type_system">type systems</a>.
 This is a joint work with <a href="https://www.doc.ic.ac.uk/~bparente/">Bernardo Toninho</a>, <a href="https://www.cs.kent.ac.uk/people/staff/jl703/">Julien Lange</a>
-and <a href="http://mrg.doc.ic.ac.uk/people/nobuko-yoshida/">Nobuko Yoshida</a></p>
+and <a href="http://mrg.doc.ic.ac.uk/people/nobuko-yoshida/">Nobuko Yoshida</a>.</p>
 
 <h2 id="tools">Tools</h2>
 
@@ -81,6 +81,13 @@ abstraction. This work was partly presented at <a href="https://www.golanguk.com
 (<a href="https://www.youtube.com/watch?v=SzgRMrrbTnM">video</a>)</li>
 </ul>
 
+<p><a href="https://github.com/nickng/gospal">nickng/gospal</a> is a new static
+analyser library for Go, also based on the <a href="http://golang.org/x/tools/go/ssa">go/ssa</a>
+package from the Go project. It is a modular library that allows for analysis
+components to be reused. A context-sensitive MiGo inference tool <code>migoinfer</code> was
+built using the library which has better code coverage and error handling than
+the predecessor.</p>
+
 <h2 id="publications">Publications</h2>
 
 <ul>
@@ -88,6 +95,8 @@ abstraction. This work was partly presented at <a href="https://www.golanguk.com
 Synthesis</a> uses the CFSMs synthesis approach.</li>
 <li><a href="http://mrg.doc.ic.ac.uk/publications/fencing-off-go-liveness-and-safety-for-channel-based-programming/">Fencing off Go: Liveness and Safety for Channel-based Programming</a>
 uses the MiGo approach.</li>
+<li><a href="http://mrg.doc.ic.ac.uk/publications/a-static-verification-framework-for-message-passing-in-go-using-behavioural-types/">A Static Verification Framework for Message Passing in Go using Behavioural Types</a> also uses the MiGo approach, but with an off-the-shelf
+model checker.</li>
 </ul>
 
 </div>
