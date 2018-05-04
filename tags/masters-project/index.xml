@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Masters Project on Nicholas Ng</title>
-    <link>http://www.nickng.io/tags/masters-project/</link>
+    <link>https://www.nickng.io/tags/masters-project/</link>
     <description>Recent content in Masters Project on Nicholas Ng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     
-	<atom:link href="http://www.nickng.io/tags/masters-project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.nickng.io/tags/masters-project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>High performance parallel design based on session programming</title>
-      <link>http://www.nickng.io/projects/individual-project/</link>
+      <link>https://www.nickng.io/projects/individual-project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.nickng.io/projects/individual-project/</guid>
+      <guid>https://www.nickng.io/projects/individual-project/</guid>
       <description>High performance parallel design based on session programming Final year individual project, The Detica Prize for Technical Innovation, 2010
  Supervisor: Nobuko Yoshida Second marker: Wayne Luk  Abstract Session programming is a programming model based on the theory of session types, a typing system for pi-calculus. Session types is developed to model structured interaction between processes and correctly typed process will have the property of communication safety. Session Java (SJ) is a full implementation of session types in Java.</description>
     </item>

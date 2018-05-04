@@ -2,70 +2,70 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Nicholas Ng</title>
-    <link>http://www.nickng.io/projects/</link>
+    <link>https://www.nickng.io/projects/</link>
     <description>Recent content in Projects on Nicholas Ng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     
-	<atom:link href="http://www.nickng.io/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.nickng.io/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>BibTeX parser and pretty printer in Go</title>
-      <link>http://www.nickng.io/projects/bibtex/</link>
+      <link>https://www.nickng.io/projects/bibtex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.nickng.io/projects/bibtex/</guid>
+      <guid>https://www.nickng.io/projects/bibtex/</guid>
       <description>nickng/bibtex is a BibTeX parser and pretty printer for Go. The main aim is the recreate a bibtex tool for the undocumented BibTeX format in a modern language that can be backwards compatible with the existing bibtex tool in the TeXLive latex distribution.
 See prettybib.nickng.io for a web-based interface.</description>
     </item>
     
     <item>
       <title>Go concurrency verification</title>
-      <link>http://www.nickng.io/projects/golang/</link>
+      <link>https://www.nickng.io/projects/golang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.nickng.io/projects/golang/</guid>
+      <guid>https://www.nickng.io/projects/golang/</guid>
       <description>The aim of this line of work is to verify channel-based concurrency interaction in Go using techniques from the research area of process calculi and type systems. This is a joint work with Bernardo Toninho, Julien Lange and Nobuko Yoshida.
 Tools nickng/dingo-hunter is a static analyser for Go based on the go/ssa package from the Go project. The tool itself is designed to be an interface to Go programs, performing type inference/model extraction from Go code.</description>
     </item>
     
     <item>
       <title>High performance parallel design based on session programming</title>
-      <link>http://www.nickng.io/projects/individual-project/</link>
+      <link>https://www.nickng.io/projects/individual-project/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.nickng.io/projects/individual-project/</guid>
+      <guid>https://www.nickng.io/projects/individual-project/</guid>
       <description>High performance parallel design based on session programming Final year individual project, The Detica Prize for Technical Innovation, 2010
  Supervisor: Nobuko Yoshida Second marker: Wayne Luk  Abstract Session programming is a programming model based on the theory of session types, a typing system for pi-calculus. Session types is developed to model structured interaction between processes and correctly typed process will have the property of communication safety. Session Java (SJ) is a full implementation of session types in Java.</description>
     </item>
     
     <item>
       <title>Multiparty Session C</title>
-      <link>http://www.nickng.io/projects/sessionc/</link>
+      <link>https://www.nickng.io/projects/sessionc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.nickng.io/projects/sessionc/</guid>
+      <guid>https://www.nickng.io/projects/sessionc/</guid>
       <description> Session C is a communication-safe programming framework which combines multiparty session types with the C programming language.
 Publications  Session Types: Towards safe and fast reconfigurable programming Multiparty Session C: Safe Parallel Programming with Message Optimisation  Related resources  Session C on GitHub (wiki) or as libraries Google PhD Poster Competition 2013 entry Runner-up, 3rd year category Session C (old repository) on Google code Scribble project  </description>
     </item>
     
     <item>
       <title>Pabble protocol description language</title>
-      <link>http://www.nickng.io/projects/pabble/</link>
+      <link>https://www.nickng.io/projects/pabble/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.nickng.io/projects/pabble/</guid>
+      <guid>https://www.nickng.io/projects/pabble/</guid>
       <description>Pabble is a protocol description language, parametric variant of the Scribble language, extended for modelling communication in parallel applications.
 Publications  Pabble: Parameterised Scribble for Parallel Programming Pabble: parameterised Scribble Protocols by Default: Safe MPI Code Generation based on Session Types  Related resources  Scribble project Poster for code generation work  Pabble examples Pabble protocols: dwarfs The following Pabble protocols are examples chosen from am evaluation metic for parallel programming models and architectues called dwarfs from UC Berkeley, details available from their CACM article.</description>
     </item>
     
     <item>
       <title>async-π</title>
-      <link>http://www.nickng.io/projects/asyncpi/</link>
+      <link>https://www.nickng.io/projects/asyncpi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.nickng.io/projects/asyncpi/</guid>
+      <guid>https://www.nickng.io/projects/asyncpi/</guid>
       <description>nickng/asyncpi is a mini-language modelled after the asynchronous π-calculus implemented in Go intended to be used as a teaching language.
 The basic syntax is given below:
 P,Q ::= 0 nil process | P|Q parallel composition of P and Q | (new a)P generation of a with scope P | !P replication of P, infinite parallel composition P|P|P... | u&amp;lt;v&amp;gt; output of v on channel u | u(x).P input of distinct variables x on u, with continuation P</description>
