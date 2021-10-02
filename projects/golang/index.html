@@ -8,7 +8,7 @@
 <link href='/css/style.min.css' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
 
-<meta name="generator" content="Hugo 0.54-DEV" />
+<meta name="generator" content="Hugo 0.89.0-DEV" />
 </head>
 <body>
 <header>
@@ -38,6 +38,14 @@
     
     <li>
     
+      <a href='/research/'>Research </a>
+    </li>
+    
+    
+    
+    
+    <li>
+    
       <a href='/publications/'>Publications </a>
     </li>
     
@@ -54,8 +62,6 @@
 <span class='tag'>process calculi</span>
 <span class='tag'>behavioural types</span>
 </div>
-
-
 <p>The aim of this line of work is to verify channel-based concurrency interaction
 in <a href="http://golang.org">Go</a> using techniques from the research area of
 <a href="https://en.wikipedia.org/wiki/Process_calculus">process calculi</a> and
@@ -64,15 +70,12 @@ This is a joint work with
 <a href="http://ctp.di.fct.unl.pt/~btoninho/">Bernardo Toninho</a> (<a href="https://twitter.com/bernpton" title="@bernpton">@bernpton</a>),
 <a href="https://www.cs.kent.ac.uk/people/staff/jl703/">Julien Lange</a> (<a href="https://twitter.com/julienlange" title="@julienlange">@julienlange</a>)
 and <a href="http://mrg.doc.ic.ac.uk/people/nobuko-yoshida/">Nobuko Yoshida</a>.</p>
-
 <h2 id="tools">Tools</h2>
-
 <p><a href="https://github.com/nickng/dingo-hunter">nickng/dingo-hunter</a> is a static
 analyser for Go based on the <a href="http://golang.org/x/tools/go/ssa">go/ssa</a> package
 from the Go project. The tool itself is designed to be an interface to Go
 programs, performing type inference/model extraction from Go code. Current
 analysis frontends include:</p>
-
 <ul>
 <li>Communicating Finite State Machines (<a href="https://github.com/nickng/cfsm">CFSMs</a>)
 modelling goroutines. This work was presented at <a href="https://www.golanguk.com/archive/2016">Golang UK conference 2016</a>
@@ -82,16 +85,13 @@ modelling goroutines. This work was presented at <a href="https://www.golanguk.c
 abstraction. This work was partly presented at <a href="https://www.golanguk.com/archive/2017">Golang UK conference 2017</a>
 (<a href="https://www.youtube.com/watch?v=SzgRMrrbTnM">video</a>)</li>
 </ul>
-
 <p><a href="https://github.com/nickng/gospal">nickng/gospal</a> is a new static
 analyser library for Go, also based on the <a href="http://golang.org/x/tools/go/ssa">go/ssa</a>
 package from the Go project. It is a modular library that allows for analysis
 components to be reused. A context-sensitive MiGo inference tool <code>migoinfer</code> was
 built using the library which has better code coverage and error handling than
 the predecessor.</p>
-
 <h2 id="publications">Publications</h2>
-
 <ul>
 <li><a href="http://mrg.doc.ic.ac.uk/publications/static-deadlock-detection-for-concurrent-go-by-global-session-graph-synthesis/">Static Deadlock Detection for Concurrent Go by Global Session Graph
 Synthesis</a> uses the CFSMs synthesis approach.</li>

@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parameterised Session Types on Nicholas Ng</title>
     <link>https://www.nickng.io/tags/parameterised-session-types/</link>
     <description>Recent content in Parameterised Session Types on Nicholas Ng</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    
-	<atom:link href="https://www.nickng.io/tags/parameterised-session-types/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-gb</language><atom:link href="https://www.nickng.io/tags/parameterised-session-types/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pabble protocol description language</title>
       <link>https://www.nickng.io/projects/pabble/</link>
@@ -17,7 +13,7 @@
       
       <guid>https://www.nickng.io/projects/pabble/</guid>
       <description>Pabble is a protocol description language, parametric variant of the Scribble language, extended for modelling communication in parallel applications.
-Publications  Pabble: Parameterised Scribble for Parallel Programming Pabble: parameterised Scribble Protocols by Default: Safe MPI Code Generation based on Session Types  Related resources  Scribble project Poster for code generation work  Pabble examples Pabble protocols: dwarfs The following Pabble protocols are examples chosen from am evaluation metic for parallel programming models and architectues called dwarfs from UC Berkeley, details available from their CACM article.</description>
+Publications  Pabble: Parameterised Scribble for Parallel Programming Pabble: parameterised Scribble Protocols by Default: Safe MPI Code Generation based on Session Types  Related resources  Scribble project Poster for code generation work   Pabble examples Pabble protocols: dwarfs The following Pabble protocols are examples chosen from am evaluation metic for parallel programming models and architectues called dwarfs from UC Berkeley, details available from their CACM article.</description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@
 <link href='/css/style.min.css' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
 
-<meta name="generator" content="Hugo 0.54-DEV" />
+<meta name="generator" content="Hugo 0.89.0-DEV" />
 </head>
 <body>
 <header>
@@ -38,6 +38,14 @@
     
     <li>
     
+      <a href='/research/'>Research </a>
+    </li>
+    
+    
+    
+    
+    <li>
+    
       <a href='/publications/'>Publications </a>
     </li>
     
@@ -51,20 +59,14 @@
 <div class='tags'>
 <span class='tag'>Masters Project</span>
 </div>
-
-
 <h3 id="high-performance-parallel-design-based-on-session-programming">High performance parallel design based on session programming</h3>
-
 <p>Final year individual project,
 <a href="http://www3.imperial.ac.uk/computing/teaching/prizes/2010/ug#4">The Detica Prize for Technical Innovation</a>, 2010</p>
-
 <ul>
 <li>Supervisor: <a href="http://www.doc.ic.ac.uk/~yoshida">Nobuko Yoshida</a></li>
 <li>Second marker: <a href="http://www.doc.ic.ac.uk/~wl">Wayne Luk</a></li>
 </ul>
-
 <h4 id="abstract">Abstract</h4>
-
 <p>Session programming is a programming model based on the theory of session types,
 a typing system for pi-calculus.
 Session types is developed to model structured interaction between processes
@@ -73,23 +75,17 @@ Session Java (SJ) is a full implementation of session types in Java.
 In this project, we aim to introduce the session programming model to Axel,
 a heterogeneous cluster with both FPGAs and GPUs as hardware
 accelerators to design communication safe parallel algorithms.</p>
-
 <p>We give an implementation of a parallel algorithm, n-body simulation,
 on the Axel cluster, using SJ and FPGAs.
 We also give a translation of our SJ n-body simulation into C to get a higher performance.
 We find good performance improvements in both implementations,
 without compromising safety property of our program.</p>
-
 <p>Finally, we present a formalisation of two new multichannel SJ primitives for parallel programming.
 We use the formalisation to prove the correctness of our n-body implementation
 and generalise the proof to a ring topology used by parallel algorithms in SJ.</p>
-
 <p><a href="report.pdf">Final Report</a></p>
-
 <p><a href="presentation.pdf">Presentation</a></p>
-
 <h4 id="related-resources">Related resources</h4>
-
 <ul>
 <li><a href="http://www.doc.ic.ac.uk/~wl/icprojects/session.html">Project description</a></li>
 <li>Publication: <a href="http://cc.doc.ic.ac.uk/projects/prj_axel/">AXEL: heterogeneous cluster</a>

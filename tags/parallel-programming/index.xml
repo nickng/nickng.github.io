@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Parallel Programming on Nicholas Ng</title>
+    <title>parallel programming on Nicholas Ng</title>
     <link>https://www.nickng.io/tags/parallel-programming/</link>
-    <description>Recent content in Parallel Programming on Nicholas Ng</description>
+    <description>Recent content in parallel programming on Nicholas Ng</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    
-	<atom:link href="https://www.nickng.io/tags/parallel-programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-gb</language><atom:link href="https://www.nickng.io/tags/parallel-programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Multiparty Session C</title>
       <link>https://www.nickng.io/projects/sessionc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.nickng.io/projects/sessionc/</guid>
-      <description> Session C is a communication-safe programming framework which combines multiparty session types with the C programming language.
+      <description>Session C is a communication-safe programming framework which combines multiparty session types with the C programming language.
 Publications  Session Types: Towards safe and fast reconfigurable programming Multiparty Session C: Safe Parallel Programming with Message Optimisation  Related resources  Session C on GitHub (wiki) or as libraries Google PhD Poster Competition 2013 entry Runner-up, 3rd year category Session C (old repository) on Google code Scribble project  </description>
     </item>
     

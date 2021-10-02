@@ -1,135 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.nickng.io/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/behavioural-types/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/projects/bibtex/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/c/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/c&#43;&#43;/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/projects/golang/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/golang/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/projects/individual-project/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/masters-project/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/projects/sessionc/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/sessionc/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/projects/pabble/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/pabble/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/parallel-programming/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/parameterised-session-types/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/parser/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/process-calculi/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/projects/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/pabble-mpi-codegen/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/sj-parallel/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/scalable/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/scribble/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/heart12/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/static-analysis/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/publications/go-synthesis/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.nickng.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://www.nickng.io/research/</loc>
+  </url><url>
     <loc>https://www.nickng.io/projects/asyncpi/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/behavioural-types/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/projects/bibtex/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/c/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/c&#43;&#43;/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/categories/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/projects/golang/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/golang/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/projects/individual-project/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/masters-project/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/projects/sessionc/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/sessionc/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/projects/pabble/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/pabble/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/parallel-programming/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/parameterised-session-types/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/parser/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/process-calculi/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/projects/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/pabble-mpi-codegen/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/sj-parallel/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/scalable/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/scribble/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/heart12/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/static-analysis/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/publications/go-synthesis/</loc>
+  </url><url>
+    <loc>https://www.nickng.io/tags/</loc>
   </url>
-  
 </urlset>

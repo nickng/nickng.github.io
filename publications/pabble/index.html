@@ -9,7 +9,7 @@
 <link href='/css/style.min.css' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
 
-<meta name="generator" content="Hugo 0.54-DEV" />
+<meta name="generator" content="Hugo 0.89.0-DEV" />
 </head>
 <body>
 <header>
@@ -37,6 +37,14 @@
     
     
     
+    <li>
+    
+      <a href='/research/'>Research </a>
+    </li>
+    
+    
+    
+    
     <li class='active'>
     
       <a href='/publications/'>Publications </a>
@@ -55,17 +63,13 @@
 <ul><li>Nicholas Ng</li>
 <li>Nobuko Yoshida</li>
 </ul>
-
-
 <h3 id="abstract">Abstract</h3>
-
 <p>Many parallel and distributed message-passing programs are written in a
 parametric way over available resources, in particular the number of nodes and
 their topologies, so that a single parallel program can scale over different
 environments. This paper presents a parameterised protocol description language,
 Pabble, which can guarantee safety and progress in a large class of practical,
 complex parameterised message-passing programs through static checking.</p>
-
 <p>Pabble can describe an overall interaction topology, using a concise and
 expressive notation, designed for a variable number of participants arranged in
 multiple dimensions. These parameterised protocols in turn automatically
@@ -74,14 +78,10 @@ communication safety and deadlock freedom. In spite of undecidability of
 endpoint projection and type checking in the underlying parameterised session
 type theory, our method guarantees the termination of endpoint projection and
 type checking.</p>
-
 <p><em>An extended version was published in the Journal of Service Oriented
 Computing and Architecture (SOCA)</em></p>
-
 <p><a href="http://dx.doi.org/10.1109/PDP.2014.20">Published version via DOI</a> | <a href="paper.pdf">Paper</a> | <a href="http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble-for-parallel-programming/">www</a> | <a href="http://mrg.doc.ic.ac.uk/publications/pabble-parameterised-scribble/">www (journal)</a></p>
-
 <h3 id="related-resources">Related Resources</h3>
-
 <ul>
 <li><a href="http://scribble.org">Scribble project</a></li>
 <li>Pabble tools source code available on
@@ -89,12 +89,9 @@ Computing and Architecture (SOCA)</em></p>
 (Tool is part of <a href="https://github.com/sessionc/libscribble">libscribble</a>
 and <a href="https://github.com/sessionc/libsesstype">libsesstype</a>)</li>
 </ul>
-
 <h3 id="sample-protocols">Sample protocols</h3>
-
 <h4 id="n-body-simulation">N-Body simulation</h4>
-
-<pre><code>global protocol NBody(role W[0..N]) {
+<pre tabindex="0"><code>global protocol NBody(role W[0..N]) {
     rec LOOP {
         (float) from Worker[i:0..N-1] to W[i+1];
         (float) from Worker[N] to W[0];
@@ -103,11 +100,8 @@ and <a href="https://github.com/sessionc/libsesstype">libsesstype</a>)</li>
     }
     /* Calculate Step */
 }
-</code></pre>
-
-<h4 id="dynamic-load-balancing">Dynamic load balancing</h4>
-
-<pre><code>global protocol LoadBalancing(role Worker[0..N]) {
+</code></pre><h4 id="dynamic-load-balancing">Dynamic load balancing</h4>
+<pre tabindex="0"><code>global protocol LoadBalancing(role Worker[0..N]) {
     rec REPEAT {
         oneof (Worker[i in 1..N]) {
             request() from Worker[i] to Worker[0];
@@ -123,11 +117,8 @@ and <a href="https://github.com/sessionc/libsesstype">libsesstype</a>)</li>
         }
     }
 }
-</code></pre>
-
-<h4 id="dense-matrix-vector-multiplication">Dense matrix-vector multiplication</h4>
-
-<pre><code>global protocol DenseMatVec(role Worker[0..N]) {
+</code></pre><h4 id="dense-matrix-vector-multiplication">Dense matrix-vector multiplication</h4>
+<pre tabindex="0"><code>global protocol DenseMatVec(role Worker[0..N]) {
     // Scatter Matrix A
     foreach (i:1..N) {
         LBound(int) from Worker[0] to Worker[i];
@@ -140,11 +131,8 @@ and <a href="https://github.com/sessionc/libsesstype">libsesstype</a>)</li>
     // Gather data
     (double) from Worker[1..N] to Worker[0];
 }
-</code></pre>
-
-<h4 id="sparse-matrix-vector-multiplication">Sparse matrix-vector multiplication</h4>
-
-<pre><code>global protocol SparseMatVec(role PE[0..N]) {
+</code></pre><h4 id="sparse-matrix-vector-multiplication">Sparse matrix-vector multiplication</h4>
+<pre tabindex="0"><code>global protocol SparseMatVec(role PE[0..N]) {
     /* Distribute data */
     (int) from W[0] to W[1..N]; // row_ptr
     (int) from W[0] to W[1..N]; // col_ind
@@ -153,11 +141,8 @@ and <a href="https://github.com/sessionc/libsesstype">libsesstype</a>)</li>
     /* Output vector */
     (double) from W[1..N] to W[0];
 }
-</code></pre>
-
-<h4 id="fast-fourier-transformation-fft">Fast-Fourier Transformation (FFT)</h4>
-
-<pre><code>const N = 3;
+</code></pre><h4 id="fast-fourier-transformation-fft">Fast-Fourier Transformation (FFT)</h4>
+<pre tabindex="0"><code>const N = 3;
 global protocol FFT(role W[0..7]) {
     foreach (r:0..N-1) {
         foreach (i:0..2&lt;&lt;N-1) {
@@ -165,11 +150,8 @@ global protocol FFT(role W[0..7]) {
         }
     }
 }
-</code></pre>
-
-<h4 id="linear-equation-solver">Linear Equation Solver</h4>
-
-<pre><code>global protocol Solver(role W[1..N][1..N], group Col={W[1..N][1]}) {
+</code></pre><h4 id="linear-equation-solver">Linear Equation Solver</h4>
+<pre tabindex="0"><code>global protocol Solver(role W[1..N][1..N], group Col={W[1..N][1]}) {
     rec CONVERGE {
         Ring(double) from W[i:1..N][j:1..N-1] to W[i][j+1];
         Ring(double) from W[i:1..N][N] to W[i][1];
@@ -179,18 +161,14 @@ global protocol FFT(role W[0..7]) {
         continue CONVERGE; 
     }
 }
-</code></pre>
-
-<h4 id="monte-carlo-pi-simulation">Monte-Carlo Pi simulation</h4>
-
-<pre><code>global protocol MonteCarloPi(role Worker[0..N]) {
+</code></pre><h4 id="monte-carlo-pi-simulation">Monte-Carlo Pi simulation</h4>
+<pre tabindex="0"><code>global protocol MonteCarloPi(role Worker[0..N]) {
     // Calculation per process
     Count(int) from Worker[0] to Worker[1..N];
     Result(double) from Worker[1..N] to Worker[0];
     // Final result calculated at Worker[0];
 }
 </code></pre>
-
 </div>
 <footer>
   <ul class='container'>

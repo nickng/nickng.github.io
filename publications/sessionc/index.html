@@ -9,7 +9,7 @@
 <link href='/css/style.min.css' rel='stylesheet'/>
 <link href='https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans|Roboto:100,300,400' rel='stylesheet'>
 
-<meta name="generator" content="Hugo 0.54-DEV" />
+<meta name="generator" content="Hugo 0.89.0-DEV" />
 </head>
 <body>
 <header>
@@ -37,6 +37,14 @@
     
     
     
+    <li>
+    
+      <a href='/research/'>Research </a>
+    </li>
+    
+    
+    
+    
     <li class='active'>
     
       <a href='/publications/'>Publications </a>
@@ -56,17 +64,13 @@
 <li>Nobuko Yoshida</li>
 <li>Kohei Honda</li>
 </ul>
-
-
 <h3 id="abstract">Abstract</h3>
-
 <p>This paper presents a new efficient programming toolchain for message
 passing-based parallel algorithms which can ensure, for any typable programs and
 for any execution path, a full guarantee of deadlock-freedom, communication
 safety and global progress through satatic checking. The methodology is embodied
 as a multiparty session-based programming environment for C and its runtime
 libraries which we call Session C.</p>
-
 <p>Programming starts from specifying a multiparty topology for a target parallel
 algorithm, such as a ring, wraparound mesh and butterfly topology, in the shape
 of a global protocol using a protocol description language. From this global
@@ -77,54 +81,32 @@ more optimised protocol through subtyping for asynchronous communication, by
 which semantically equivalent optimised programs with the original safety
 guarantees can be obtained. The underlying theory can ensure that the complexity
 of the toolchain stays in polynomial time against the size of programs.</p>
-
 <p>We apply this framework to representative parallel algorithms with complex
 communication topologies. The benchmark results show that Session C performs
 competitively against MPI.</p>
-
 <p><a href="http://dx.doi.org/10.1007/978-3-642-30561-0_15">Published version via DOI</a> |
 <a href="paper.pdf">Paper</a> | <a href="slides.pdf">Slides</a> | <a href="http://mrg.doc.ic.ac.uk/publications/multiparty-session-c-safe-parallel-programming-with-message-optimisation/">www</a></p>
-
 <h3 id="benchmarks">Benchmarks</h3>
-
 <h4 id="n-body-simulation">N-body simulation</h4>
-
-<p><img src="./nbody/nbody.png" alt="N-body simulation" /></p>
-
+<p><img src="./nbody/nbody.png" alt="N-body simulation"></p>
 <p>Comparison of implementations of N-body simulation in Session C with MPI.</p>
-
 <p>Data files: <a href="./nbody/sessc.dat">Session C</a> | <a href="./nbody/mpi.dat">MPI</a></p>
-
 <h4 id="linear-equation-solver">Linear equation solver</h4>
-
-<p><img src="./solver/solver.png" alt="Linear equation solver" /></p>
-
+<p><img src="./solver/solver.png" alt="Linear equation solver"></p>
 <p>Comparison of implementations of a parallel linear equation solver in Session C with MPI.</p>
-
 <p>Data files: <a href="./solver/sessc.dat">Session C</a> | <a href="./solver/mpi.dat">MPI</a></p>
-
 <h4 id="fast-fourier-transformation">Fast Fourier Transformation</h4>
-
-<p><img src="./fft/fft.png" alt="Fast Fourier Transformation" /></p>
-
+<p><img src="./fft/fft.png" alt="Fast Fourier Transformation"></p>
 <p>Comparison of implementations of Fast Fourier Transformation in Session C with MPI.</p>
-
 <p>Data files: <a href="./fft/sessc.dat">Session C</a> | <a href="./fft/mpi.dat">MPI</a></p>
-
 <h4 id="jacobi-solution-of-the-discrete-poisson-equation">Jacobi solution of the Discrete Poisson Equation</h4>
-
-<p><img src="./jacobi/jacobi.png" alt="Jacobi solution" /></p>
-
+<p><img src="./jacobi/jacobi.png" alt="Jacobi solution"></p>
 <p>Comparison of implementations of a Jacobi method for solving the Discrete Poisson Equation in Session C with MPI.</p>
-
 <ul>
 <li>Data files: <a href="./jacobi/sessc.dat">Session C</a> | <a href="./jacobi/mpi.dat">MPI</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="related-resources">Related Resources</h3>
-
 <ul>
 <li><a href="http://scribble.org/">Scribble project</a></li>
 <li>Session C source code is available on <a href="http://sesscc.googlecode.com/" title="Google Code: sesscc">Google code hosting</a></li>
